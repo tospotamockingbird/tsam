@@ -40,7 +40,10 @@
                     <legend>Filter Potential Birds</legend>
                     <label>Color<input type="text" name="color" /></label>
                     <label>Size<input type="text" name="size" /></label>
-                    <label>Flight Pattern<input type="text" name="flight" /></label>
+                    <label>Flight Pattern:
+                        <label>Flap<input type="radio" name="flight" value="flap" /></label>
+                        <label>Glide/Soar<input type="radio" name="flight" value="glide/soar" /></label>
+                    </label>                    
                     <!-- Should we use zip code?  Or something else? -->                    
                     <label>Zip Code???<input type="text" name="zip" /></label>
                     <label>Date<input type="date" name="date" /></label>
@@ -50,10 +53,13 @@
                 </fieldset>
             </form>
 
-            <!-- Checkboxes go in this form, but they need to be added dynamically -->
+            <!-- Checkboxes will need to be added dynamically, but they're here now for structure -->
             <form>
                 <fieldset>
                     <legend>Did You Spot One of These Birds?</legend>
+                    <label>Crow<input type="radio" name="bird" value="Crow" /></label>
+                    <label>Finch<input type="radio" name="bird" value="Finch" /></label>
+                    <label>Ostrich<input type="radio" name="bird" value="Ostrich" /></label>   
                     <input type="submit" name="choose-submit" value="Add Bird"/>
                 </fieldset>
             </form>
