@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Bald Eagle",
+        "imageURL": "https://senecaparkzoo.org/wp-content/uploads/2016/03/Bald-Eagle-2016-Marie-Kraus-Abe-1-800x601-e1461544090645.jpg?x82903",
+        "date": "6/6/2018",
+        "location": "Eagle Creek"
+    },
+    {
+        "name": "Golden Eagle",
+        "imageURL": "https://www.visitouterhebrides.co.uk/imageresizer/?image=%2fdmsimgs%2fgolden%20eagle%2062%20L.Campbell_1056106882.jpg&action=ProductDetail",
+        "date": "1/21/2018",
+        "location": "Mt.Hood"
+    },
+    {
+        "name": "Hawk",
+        "imageURL": "http://www.spiritanimal.info/pictures/hawk/Hawk-Spirit-Animal-4.jpg",
+        "date": "11/8/2018",
+        "location": "Hood River"
+    },
+    {
+        "name": "Goose",
+        "imageURL": "https://s3.amazonaws.com/com-aab-media/photo/59950661-1280px.jpg",
+        "date": "7/11/2018",
+        "location": "Waterfront Park"
+    },
+    {
+        "name": "Humming Bird",
+        "imageURL": "https://s3.amazonaws.com/com-aab-media/photo/60395511-1280px.jpg",
+        "date": "8/1/2018",
+        "location": "Mt.Tabor"
+    }
+]
