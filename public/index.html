@@ -24,7 +24,7 @@
             <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
 
             <form>
-                <fieldset>
+                <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
                     <label>Species<input type="text" name="species" /></label>
                     <!-- Should we use zip code?  Or something else? -->
@@ -37,7 +37,7 @@
             </form>
 
             <form>
-                <fieldset>
+                <fieldset id="filterBird">
                     <legend>Filter Potential Birds</legend>
                     <label>Color<input type="text" name="color" /></label>
                     <label>Size<input type="text" name="size" /></label>
@@ -56,7 +56,7 @@
 
             <!-- Checkboxes will need to be added dynamically, but they're here now for structure -->
             <form>
-                <fieldset>
+                <fieldset id="discoverBird">
                     <legend>Did You Spot One of These Birds?</legend>
                     <label>Crow<input type="radio" name="bird" value="Crow" /></label>
                     <label>Finch<input type="radio" name="bird" value="Finch" /></label>
