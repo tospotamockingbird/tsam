@@ -3,11 +3,39 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Profile Page</title>
-    
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+
+    <script id="profile-list-template" type="text/x-handlebars-template">
+        <p>{{name}}</p>p>
+        <img src="{{imageURL}}">
+        <p>{{{date}}}</p>
+        <p>{{{loctaion}}}</p>
+    </script>
+
+    <script id="profile-count-template" type="text/x-handlebars-template">
+        <p>{{name}}</p>p>
+        <img src="{{imageURL}}">
+        <p>{{{date}}}</p>
+        <p>{{{loctaion}}}</p>
+    </script>
+
 </head>
 <body>
-    
+    <header>
+
+    </header>
+    <main>
+        <section id="profile count">
+
+        </section>
+        <section id="profile list">
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
 </body>
 </html>
