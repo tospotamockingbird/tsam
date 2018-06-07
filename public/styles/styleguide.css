@@ -1,0 +1,66 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2017/07/12/19/43/mockingbird-2498130_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 50px;
+  color: rgba(115,97,83,1);
+  text-shadow: rgba(225,233,231,1) 2px;
+  text-align: right;
+  padding-right: 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center
+}
+
+li {
+  font-size: 20px;
+  padding: 40px;
+  display: inline;
+}
+
+a, legend {
+  font-family: 'Abel', sans-serif;
+  color: rgba(225,233,231,1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(81,158,145,1);
+}
+
+/* a:visited {
+  color: rgba(16,105,90,1);
+  font-size: 25px;
+} */
+
+fieldset {
+  border: 2px solid rgba(16,105,90,0.7);
+  background-color: rgba(81,158,145,0.4);
+}
+
+p {
+  font-family: 'Cabin', sans-serif;
+}
+
+footer {
+  color: rgba(225,233,231,1);
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* rgba(115,97,83) --> grey/brown */
+/* rgba(142,114,97,0.5) --> lighter grey/brown */
+/* rgba(16,105,90) --> green/blue */
+/* rgba(81,158,145) --> greyish robins egg */
+/* rgba(225,233,231) --> pale pale blue/almost white */
+
+/* font-family: 'Abel', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'Nanum Gothic', sans-serif; */
