@@ -1,20 +1,50 @@
 'use strict';
 
+// renders the your birds list to profile.html
 let userBirds = [];
 
-function CreateUserBirds (userData) {
-    this.species = userData.species;
-    this.imgFilepath = userData.imgFilepath;
-    this.date = userData.date;
-    this.location = userData.location;
+function CreateUserBird (usersBirdData) {
+    this.species = usersBirdData.species;
+    this.imgFilepath = usersBirdData.imgFilepath;
+    this.date = usersBirdData.date;
+    this.location = usersBirdData.location;
 }
 
 function renderUserBirds() {
     userBirds.forEach(function(userBirds) {
-        $('#').append(project.toHtml()); // add id from profile.html
+        $('#profile-list').append(project.toHtml());
     });
-};
+}
 
-CreateUserBirds.prototype.toHtml = function() {
-    
+CreateUserBird.prototype.toHtml = function() {
+    const listTemplateFiller = Handlebars.compile($('#profile-list-template').html());
+    const filledListTemplate = filledListTemplate(this);
+    return filledListTemplate;
+}
+
+function runWhenDone (usersBirdData) {
+    usersBirdData.forEach(item => userBirds.push(new CreateUserBird(item)));
+
+    if(!localStorage.userBirds) {
+        localStorage.setItem('userBirds', JSON.stringify(usersBirdData));
+    }
+
+    renderUserBirds();
+}
+
+function runWhenFails (err) {
+    console.error('error: renderUserBirds', err);
+}
+
+// check if data needs to be fetched
+if (!localStorage.userBirds) {
+    $.ajax({
+        type: 'GET',
+        url: 'userData.json',
+        success: runWhenDone,
+        error: runWhenFails
+    })
+} else {
+    const parsedUserBirdsData = JSON.parse(localStorage.userBirds);
+    runWhenDone(parsedUserBirdsData);
 }
