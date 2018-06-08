@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <script id="profile-count-template" type="text/x-handlebars-template">
+        <p>{{total all birds}}</p>
+        <p>{{{total one bird}}}</p>
+        <p>{{{total one bird}}}</p>
+    </script>
+
+    <script id="profile-list-template" type="text/x-handlebars-template">
+        <p>{{name}}</p>p>
+        <img src="{{imageURL}}">
+        <p>{{{date}}}</p>
+        <p>{{{location}}}</p>
+    </script>
+
+</head>
+<body>
+    <header>
+        <h1>To Spot a Mockingbird</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotspots.html">Hotspots</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login-signup.html">Login/Signup</a></li>                    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="profile-count">
+
+        </section>
+        <section id="profile-list">
+
+        </section>
+    </main>
+    <footer>
+        &copy To Spot a Mockingbird | 2018
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <script type="text/javascript" src="./scripts/models/birdData.js"></script>
+    <script type="text/javascript" src="./scripts/models/hotspotsData.js"></script>
+    <script type="text/javascript" src="./scripts/models/userData.js"></script>
+    <script type="text/javascript" src="./scripts/views/indexView.js"></script>
+    <script type="text/javascript" src="./scripts/views/hotspotsView.js"></script>
+    <script type="text/javascript" src="./scripts/views/profileView.js"></script>
+    <script type="text/javascript" src="./scripts/views/loginView.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/indexController.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/hotspotsController.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/profileController.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
+    <script>
+        UserData.fetchAll();
+    </script>
+</body>
+</html>
