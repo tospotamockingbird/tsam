@@ -1,5 +1,5 @@
 body {
-  background: url("https://cdn.pixabay.com/photo/2017/07/12/19/43/mockingbird-2498130_960_720.jpg") no-repeat center center fixed;
+  background: url("https://photos-6.dropbox.com/t/2/AAAgU0obgaSSe-YclpZUsJAeUA4_8rXNX6FLhPMTRvd7fQ/12/868887072/jpeg/32x32/1/_/1/2/mockingbird-2498130.jpg/ELDu1bEJGAQgAigC/KhcRE6P031-Z06PFVO7uPYZAYTk1xGUP0ZmrFafjjG8?size=32x32&size_mode=5") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -52,16 +52,20 @@ fieldset {
 
 p {
   font-family: 'Cabin', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: rgba(225,233,231,1);
 }
 
 #knownBird, #filterBird, #discoverBird {
   display: flex;
-  margin: 0;
+  position: relative;
+  float: left;
   width: 30%;
 }
 
+input[type=text]:focus {
+  border: 2px solid rgba(63,191,131,1);
+}
 
 button {
   color: rgba(115,97,83,1);
@@ -70,9 +74,17 @@ button {
   font-family: 'Abel', sans-serif;
 }
 
+.required {
+  background-color: rgba(142,114,97,1);
+}
 
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
   color: rgba(225,233,231,1);
   font-family: 'Nanum Gothic', sans-serif;
 }
