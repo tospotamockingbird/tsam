@@ -15,7 +15,7 @@
         <p>{{name}}</p>p>
         <img src="{{imageURL}}">
         <p>{{{date}}}</p>
-        <p>{{{loctaion}}}</p>
+        <p>{{{location}}}</p>
     </script>
 
 </head>
@@ -32,10 +32,10 @@
         </nav>
     </header>
     <main>
-        <section id="profile count">
+        <section id="profile-count">
 
         </section>
-        <section id="profile list">
+        <section id="profile-list">
 
         </section>
     </main>
@@ -55,5 +55,8 @@
     <script type="text/javascript" src="./scripts/controllers/hotspotsController.js"></script>
     <script type="text/javascript" src="./scripts/controllers/profileController.js"></script>
     <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
+    <script>
+        UserData.fetchAll();
+    </script>
 </body>
 </html>
