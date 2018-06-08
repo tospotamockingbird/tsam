@@ -4,8 +4,8 @@
 let userBirds = [];
 
 function CreateUserBird (usersBirdData) {
-    this.species = usersBirdData.species;
-    this.imgFilepath = usersBirdData.imgFilepath;
+    this.name = usersBirdData.name;
+    this.imgURL = usersBirdData.imgURL;
     this.date = usersBirdData.date;
     this.location = usersBirdData.location;
 }
@@ -36,7 +36,6 @@ function runWhenFails (err) {
     console.error('error: renderUserBirds', err);
 }
 
-// check if data needs to be fetched
 if (!localStorage.userBirds) {
     $.ajax({
         type: 'GET',
