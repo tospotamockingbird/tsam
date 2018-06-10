@@ -5,7 +5,7 @@ function initMap() {
   // The map, centered at var portland
   var map = new google.maps.Map(
       document.getElementById('map'), {
-        zoom: 11,
+        zoom: 9,
         center: portland,
         mapTypeId: 'terrain',
         styles: [
@@ -110,8 +110,29 @@ function initMap() {
           }
       ]
     });
-  // The marker, positioned at Oregon
-  // var marker = new google.maps.Marker({position: oregon, map: map});
+    const getObservations = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://ebird.org/ws2.0/data/obs/US-OR/recent",
+      "method": "GET",
+      "headers": {
+        "X-eBirdApiToken": "ojikre4deq6u"
+      }
+    }
+    $.ajax(getObservations).done(function (response) {
+      console.log(response);
+      response.forEach( bird => {
+        let location = {lat: bird.lat, lng: bird.lng};
+        let marker = new google.maps.Marker({position: location, map: map});
+        let contentString = `<h1>${bird.comName}</h1><strong>Location: </strong>${bird.locName}<br><strong>Date: </strong>${bird.obsDt}<br><strong>Count: </strong>${bird.howMany}`;
+        let infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      })
+    });
 }
 
 var GMAPS_KEY = config.GMAPS_KEY
