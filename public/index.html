@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Spot a Mockingbird</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Abel|Cabin|Nanum+Gothic" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>To Spot a Mockingbird</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotspots.html">Hotspots</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="login-signup.html">Login/Signup</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
+            <br/>
+            <form>
+                <fieldset id="knownBird">
+                    <legend>Add Known Bird</legend>
+                    <label>Species<input type="text" name="species" /></label>
+                    <!-- Should we use zip code?  Or something else? -->
+                    <label>Zip Code???<input type="text" name="zip" /></label>
+                    <label>Date<input type="date" name="date" /></label>
+                    <label>Upload Picture<input type="file" name="picture" /></label>
+                    <input type="submit" value="Upload" />
+                    <input type="submit" name ="add-submit" value="Add Known Bird" />
+                </fieldset>
+            </form>
+
+            <form>
+                <fieldset id="filterBird">
+                    <legend>Filter Potential Birds</legend>
+                    <label>Color:
+                        <br />
+                        <label>Black<input type="checkbox" name="color" value="black" /></label>
+                        <label>Gray<input type="checkbox" name="color" value="gray" /></label>
+                        <label>White<input type="checkbox" name="color" value="white" /></label>
+                        <label>Buff/Brown<input type="checkbox" name="color" value="buff/brown" /></label>
+                        <label>Red<input type="checkbox" name="color" value="red" /></label>
+                        <label>Yellow<input type="checkbox" name="color" value="yellow" /></label>
+                        <label>Olive/Green<input type="checkbox" name="color" value="olive/green" /></label>
+                        <label>Orange<input type="checkbox" name="color" value="orange" /></label>
+                    </label>
+                    <label>Size:
+                        <br />
+                            <label>Small (Sparrow - Robin)<input type="radio" name="size" value="small" /></label>
+                            <label>Medium (Crow - Duck)<input type="radio" name="size" value="medium" /></label>
+                            <label>Large (Hawk - Owl)<input type="radio" name="size" value="large" /></label>
+                            <label>Extra-Large (Heron - Eagle - Vulture)<input type="radio" name="size" value="extra-large" /></label>                            
+                    </label>
+                    <label>Behavior:
+                        <br />
+                        <label>Soaring<input type="radio" name="behavior" value="soaring" /></label>
+                        <label>Ground Foraging<input type="radio" name="behavior" value="foraging" /></label>
+                        <label>In Tree/Bush<input type="radio" name="behavior" value="in-tree" /></label>
+                        <label>Swimming/Wading<input type="radio" name="behavior" value="swimming" /></label>
+                        <label>None of the Above<input type="radio" name="behavior" value="no-behavior" /></label>                        
+                    </label>
+                    <label>Location<input type="text" name="location" /></label>
+                    <label>Date<input type="date" name="date" /></label>
+                    <label>Upload Picture<input type="file" name="picture" /></label>
+                    <input type="submit" value="Upload" />
+                    <input type="submit" name ="filter-submit" value="Show Potential Birds" />
+                </fieldset>
+            </form>
+
+            <!-- Checkboxes will need to be added dynamically, but they're here now for structure -->
+            <form>
+                <fieldset id="discoverBird">
+                    <legend>Did You Spot One of These Birds?</legend>
+                    <label>Crow<input type="radio" name="bird" value="Crow" /></label>
+                    <label>Finch<input type="radio" name="bird" value="Finch" /></label>
+                    <label>Ostrich<input type="radio" name="bird" value="Ostrich" /></label>
+                    <input type="submit" name="choose-submit" value="Add Bird"/>
+                </fieldset>
+            </form>
+        </main>
+
+        <footer>&copy To Spot a Mockingbird | 2018</footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+        <script type="text/javascript" src="./scripts/models/userLiSuData.js"></script>
+        <script type="text/javascript" src="./scripts/models/hotspotsData.js"></script>
+        <script type="text/javascript" src="./scripts/models/userData.js"></script>
+        <script type="text/javascript" src="./scripts/views/indexView.js"></script>
+        <script type="text/javascript" src="./scripts/views/profileView.js"></script>
+        <script type="text/javascript" src="./scripts/views/loginView.js"></script>
+        <script type="text/javascript" src="./scripts/controllers/indexController.js"></script>
+        <script type="text/javascript" src="./scripts/controllers/hotspotsController.js"></script>
+        <script type="text/javascript" src="./scripts/controllers/profileController.js"></script>
+        <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
+    </body>
+</html>

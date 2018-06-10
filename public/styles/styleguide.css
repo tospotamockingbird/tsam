@@ -1,0 +1,113 @@
+body {
+  background: url("https://photos-6.dropbox.com/t/2/AAAgU0obgaSSe-YclpZUsJAeUA4_8rXNX6FLhPMTRvd7fQ/12/868887072/jpeg/32x32/1/_/1/2/mockingbird-2498130.jpg/ELDu1bEJGAQgAigC/KhcRE6P031-Z06PFVO7uPYZAYTk1xGUP0ZmrFafjjG8?size=32x32&size_mode=5") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 50px;
+  color: rgba(115,97,83,1);
+  text-align: right;
+  padding-right: 15px;
+}
+
+h3 {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: rgba(225,233,231,1);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center
+}
+
+li {
+  font-size: 20px;
+  padding: 40px;
+  display: inline;
+}
+
+a, legend, label {
+  font-family: 'Abel', sans-serif;
+  color: rgba(225,233,231,1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-transform: uppercase;
+  color: rgba(81,158,145,1);
+}
+
+/* a:visited {
+  color: rgba(16,105,90,1);
+  font-size: 25px;
+} */
+
+fieldset {
+  border: 2px solid rgba(16,105,90,0.7);
+  background-color: rgba(75,175,145,0.4);
+  align-content: center;
+  display: inline;
+}
+
+p {
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  color: rgba(225,233,231,1);
+}
+
+main form {
+  display: flex;
+  justify-content: space-around;
+}
+
+#knownBird, #filterBird, #discoverBird {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+
+input[type=text]:focus {
+  border: 2px solid rgba(63,191,131,1);
+}
+
+button {
+  color: rgba(115,97,83,1);
+  background-color: (142,114,97,1);
+  border-radius: 25%;
+  font-family: 'Abel', sans-serif;
+}
+
+.required {
+  background-color: rgba(142,114,97,1);
+}
+
+#map {
+  border: 5px dotted rgba(75,175,145,1);
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: rgba(225,233,231,1);
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* rgba(115,97,83) --> grey/brown */
+/* rgba(142,114,97,0.5) --> lighter grey/brown */
+/* rgba(16,105,90) --> green/blue */
+/* rgba(75,175,145) --> robins egg */
+/* rgba(225,233,231) --> pale pale blue/almost white */
+
+/* font-family: 'Abel', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'Nanum Gothic', sans-serif; */
