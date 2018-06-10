@@ -1,6 +1,6 @@
 'use strict';
 
-// filters potential birds results
+// shows potential birds results
 
 BirdData.all = [];
 
@@ -15,23 +15,20 @@ function BirdData(birdDataObj) {
 };
 
 BirdData.prototype.toHtml = function() {
-
-    // BirdData.fetchAll();
-
    const resultsTemplate = Handlebars.compile($('#filter-results-template').text());
 
    return resultsTemplate(this);
 };
 
-BirdData.loadAll = function(rawData) {
-    rawData.forEach(function(birdObject) {
+BirdData.loadAll = function(rawBirdData) {
+    rawBirdData.forEach(function(birdObject) {
         BirdData.all.push(new BirdData(birdObject));
     })
 };
 
 BirdData.fetchAll = function() {
-    if (localStorage.rawData) {
-        const parsedBirdData = JSON.parse(localStorage.rawData);
+    if (localStorage.rawBirdData) {
+        const parsedBirdData = JSON.parse(localStorage.rawBirdData);
         BirdData.loadAll(parsedBirdData);
         indexView.initResults();
     } else {
@@ -47,5 +44,3 @@ BirdData.fetchAll = function() {
         });
     };
 };
-
-// BirdData.fetchAll();
