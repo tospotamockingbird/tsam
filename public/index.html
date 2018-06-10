@@ -95,6 +95,7 @@
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+        <script type="text/javascript" src="./scripts/models/birdData.js"></script>
         <script type="text/javascript" src="./scripts/models/userLiSuData.js"></script>
         <script type="text/javascript" src="./scripts/models/hotspotsData.js"></script>
         <script type="text/javascript" src="./scripts/models/userData.js"></script>
@@ -105,5 +106,8 @@
         <script type="text/javascript" src="./scripts/controllers/hotspotsController.js"></script>
         <script type="text/javascript" src="./scripts/controllers/profileController.js"></script>
         <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
+        <script>
+            BirdData.fetchAll();
+        </script>
     </body>
 </html>

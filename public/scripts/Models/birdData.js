@@ -15,6 +15,9 @@ function BirdData(birdDataObj) {
 };
 
 BirdData.prototype.toHtml = function() {
+
+    // BirdData.fetchAll();
+
    const resultsTemplate = Handlebars.compile($('#filter-results-template').text());
 
    return resultsTemplate(this);
@@ -44,3 +47,5 @@ BirdData.fetchAll = function() {
         });
     };
 };
+
+// BirdData.fetchAll();
