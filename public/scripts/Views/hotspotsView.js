@@ -1,8 +1,6 @@
 // Initialize and add the map
 function initMap() {
-  // The location of Portland, OR
   var portland = {lat: 45.5122, lng: -122.6587};
-  // The map, centered at var portland
   var map = new google.maps.Map(
       document.getElementById('map'), {
         zoom: 9,
@@ -110,21 +108,18 @@ function initMap() {
           }
       ]
     });
-    const getObservations = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://ebird.org/ws2.0/data/obs/US-OR/recent",
-      "method": "GET",
-      "headers": {
-        "X-eBirdApiToken": "ojikre4deq6u"
-      }
-    }
-    $.ajax(getObservations).done(function (response) {
+
+    $.when(
+      $.ajax(oregon),
+      $.ajax(washington)
+    )
+    .done( (oregon, washington) => {
+      let response = oregon[0].concat(washington[0]);
       console.log(response);
       response.forEach( bird => {
         let location = {lat: bird.lat, lng: bird.lng};
         let marker = new google.maps.Marker({position: location, map: map});
-        let contentString = `<h1>${bird.comName}</h1><strong>Location: </strong>${bird.locName}<br><strong>Date: </strong>${bird.obsDt}<br><strong>Count: </strong>${bird.howMany}`;
+        let contentString = `<div class="info-window"><h1>${bird.comName}</h1><strong>Location: </strong>${bird.locName}<br><strong>Date: </strong>${bird.obsDt}<br><strong>Count: </strong>${bird.howMany}`;
         let infowindow = new google.maps.InfoWindow({
           content: contentString
         });
@@ -133,7 +128,7 @@ function initMap() {
         });
       })
     });
-}
+};
 
 var GMAPS_KEY = config.GMAPS_KEY
 const scriptMaker = () => {
