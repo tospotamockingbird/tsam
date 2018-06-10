@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Abel|Cabin|Nanum+Gothic" rel="stylesheet">
+
+        <script id="filter-results-template" type="text/x-handlebars-template">
+            <p>{{name}}</p>
+            <img>{{image}}</img>
+        </script>
     </head>
 
     <body>
@@ -74,7 +79,7 @@
             </form>
 
             <!-- Checkboxes will need to be added dynamically, but they're here now for structure -->
-            <form>
+            <form id="filter-results">
                 <fieldset id="discoverBird">
                     <legend>Did You Spot One of These Birds?</legend>
                     <label>Crow<input type="radio" name="bird" value="Crow" /></label>
