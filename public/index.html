@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Abel|Cabin|Nanum+Gothic" rel="stylesheet">
+
+        <script id="filter-results-template" type="text/x-handlebars-template">
+            <p>{{name}}</p>
+            <img>{{image}}</img>
+        </script>
     </head>
 
     <body>
@@ -52,7 +57,7 @@
                     </label>
                     <label>Size:
                         <br />
-                            <label>Small (Sparrow - Robin)<input type="radio" name="size" value="small" /></label>
+                            <label>Small (Sparrow - Robin)<input id="small" type="radio" name="size" value="small" /></label>
                             <label>Medium (Crow - Duck)<input type="radio" name="size" value="medium" /></label>
                             <label>Large (Hawk - Owl)<input type="radio" name="size" value="large" /></label>
                             <label>Extra-Large (Heron - Eagle - Vulture)<input type="radio" name="size" value="extra-large" /></label>
@@ -77,10 +82,11 @@
             <form>
                 <fieldset id="discoverBird">
                     <legend>Did You Spot One of These Birds?</legend>
-                    <label>Crow<input type="radio" name="bird" value="Crow" /></label>
+                    <div id="filter-results"></div>
+                    <!-- <label>Crow<input type="radio" name="bird" value="Crow" /></label>
                     <label>Finch<input type="radio" name="bird" value="Finch" /></label>
                     <label>Ostrich<input type="radio" name="bird" value="Ostrich" /></label>
-                    <input type="submit" name="choose-submit" value="Add Bird"/>
+                    <input type="submit" name="choose-submit" value="Add Bird"/> -->
                 </fieldset>
             </form>
         </main>
@@ -89,6 +95,7 @@
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+        <script type="text/javascript" src="./scripts/models/birdData.js"></script>
         <script type="text/javascript" src="./scripts/models/userLiSuData.js"></script>
         <script type="text/javascript" src="./scripts/models/hotspotsData.js"></script>
         <script type="text/javascript" src="./scripts/models/userData.js"></script>
@@ -99,5 +106,8 @@
         <script type="text/javascript" src="./scripts/controllers/hotspotsController.js"></script>
         <script type="text/javascript" src="./scripts/controllers/profileController.js"></script>
         <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
+        <script>
+            BirdData.fetchAll();
+        </script>
     </body>
 </html>
