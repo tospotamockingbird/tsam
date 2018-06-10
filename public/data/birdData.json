@@ -6,7 +6,7 @@
     "color": "buff/brown, red",
     "size": "small",
     "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "image": "/images/robin1.jpg, /images/robin2.jpg, /images/robin3.jpg, /images/robin4.jpg"
   },
 
   {
@@ -16,7 +16,7 @@
     "color": "gray, black,",
     "size": "small",
     "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "image": "/images/junco1.jpg, /images/junco2.jpg, /images/junco3.jpg ,/images/junco4.png"
   },
 
   {
@@ -26,7 +26,7 @@
     "color": "buff/brown, white",
     "size": "small",
     "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "image": "/images/housefinch1.jpg, /images/housefinch2.jpg, /images/housefinch3.jpg, /images/housefinch4.jpg"
   },
 
   {
@@ -36,7 +36,7 @@
     "color": "buff/brown, yellow",
     "size": "medium",
     "behavior": "ground foraging, soaring, in tree/bush",
-    "image": ""
+    "image": "/images/flicker1.jpg, /images/flicker2.jpg"
   },
 
   {
@@ -46,7 +46,7 @@
     "color": "blue, gray",
     "size": "medium",
     "behavior": "soaring, ground foraging, in tree/bush",
-    "image": ""
+    "image": "/images/scrubjay1.jpg, /images/scrubjay2.jpg"
   },
 
   {
@@ -56,17 +56,17 @@
     "color": "olive/green, buff/brown",
     "size": "medium",
     "behavior": "swimming/wading",
-    "image": ""
+    "image": "/images/mallard1.jpg, /images/mallard2.jpg"
   },
 
   {
     "birdID": "007",
     "name": "Greater Sage-Grouse",
     "habitat": "desert",
-    "color": "",
+    "color": "buff/brown, white",
     "size": "medium",
     "behavior": "ground foraging",
-    "image": ""
+    "image": "/images/sagegrouse1.jpg, /images/sagegrouse2.jpg"
   },
 
   {
@@ -76,7 +76,7 @@
     "color": "black, red, gray, white",
     "size": "large",
     "behavior": "ground foraging",
-    "image": ""
+    "image": "/images/turkey1.jpg, /images/turkey2.jpg"
   },
 
   {
@@ -86,7 +86,7 @@
     "color": "gray, red, white, buff/brown",
     "size": "small",
     "behavior": "ground foraging",
-    "image": ""
+    "image": "/images/rockpigeon1.jpg, /images/rockpigeon2.jpg"
   },
 
   {
@@ -96,7 +96,7 @@
     "color": "black, gray, white",
     "size": "large",
     "behavior": "swimming/wading, ground foraging, soaring",
-    "image": ""
+    "image": "/images/canada1.jpg, /images/canada2.jpg"
   },
 
   {
@@ -106,7 +106,7 @@
     "color": "black, gray, white",
     "size": "medium",
     "behavior": "swimming/wading, ground foraging",
-    "image": ""
+    "image": "/images/cackling1.jpg, /images/cackling2.jpg"
   },
 
   {
@@ -116,7 +116,7 @@
     "color": "white, buff/brown, gray",
     "size": "large",
     "behavior": "soaring, swimming/wading, in tree/bush",
-    "image": ""
+    "image": "/images/osprey1.jpg, /images/osprey2.jpg, /images/osprey3.jpg"
   },
 
   {
@@ -126,7 +126,7 @@
     "color": "buff/brown, white",
     "size": "XL",
     "behavior": "soaring, swimming/wading, in tree/bush",
-    "image": ""
+    "image": "/images/bald1.jpg, /images/bald2.jpg, /images/bald3.jpg"
   },
 
   {
