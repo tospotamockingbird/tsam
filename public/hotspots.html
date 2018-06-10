@@ -9,7 +9,7 @@
     <style>
           /* Set the size of the section element that contains the map */
           #map {
-            height: 500px;  /* The height is 500 pixels */
+            height: 600px;  /* The height is 500 pixels */
             width: 100%;  /* The width is the width of the web page/parent container */
           }
         </style>
@@ -27,10 +27,11 @@
           </ul>
       </nav>
     </header>
-    <h3>Where the birds are...</h3>
+    <h3>Where the birds are:</h3>
     <!--Section element for the map -->
     <section id="map"></section>
     <!-- ID here for scripts div so we can select and append the dynamic gmapScript -->
+    <p>Location data provided by: eBird Basic Dataset. Version: EBD_relNov-2017. Cornell Lab of Ornithology, Ithaca, New York. Nov 2017.</p>
     <div id="scripts">
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -38,6 +39,7 @@
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script type='text/javascript' src='/config.js'></script>
+    <script type='text/javascript' src='/public/Scripts/Models/hotspotsData.js'></script>
     <script type='text/javascript' src='/public/Scripts/Views/hotspotsView.js'></script>
     </div>
   </body>

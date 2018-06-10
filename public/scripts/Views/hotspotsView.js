@@ -1,11 +1,9 @@
 // Initialize and add the map
 function initMap() {
-  // The location of Portland, OR
   var portland = {lat: 45.5122, lng: -122.6587};
-  // The map, centered at var portland
   var map = new google.maps.Map(
       document.getElementById('map'), {
-        zoom: 11,
+        zoom: 9,
         center: portland,
         mapTypeId: 'terrain',
         styles: [
@@ -110,9 +108,26 @@ function initMap() {
           }
       ]
     });
-  // The marker, positioned at Oregon
-  // var marker = new google.maps.Marker({position: oregon, map: map});
-}
+
+    $.when(
+      $.ajax(oregon),
+      $.ajax(washington)
+    )
+    .done( (oregon, washington) => {
+      let orWA = oregon[0].concat(washington[0]);
+      orWA.forEach( bird => {
+        let location = {lat: bird.lat, lng: bird.lng};
+        let marker = new google.maps.Marker({position: location, map: map});
+        let contentString = `<div class="info-window"><h1>${bird.comName}</h1><strong>Location: </strong>${bird.locName}<br><strong>Date: </strong>${bird.obsDt}<br><strong>Count: </strong>${bird.howMany}`;
+        let infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      })
+    });
+};
 
 var GMAPS_KEY = config.GMAPS_KEY
 const scriptMaker = () => {

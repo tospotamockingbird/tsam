@@ -3,360 +3,534 @@
     "birdID": "001",
     "name": "American Robin",
     "habitat": "urban",
-    "color": "buff/brown, red",
+    "color": [ "buff/brown",
+               "red" ],
     "size": "small",
     "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "image": [ "./images/robin1.jpg",
+               "./images/robin2.jpg",
+               "./images/robin3.jpg",
+               "./images/robin4.jpg" ]
   },
 
   {
     "birdID": "002",
     "name": "Dark-Eyed Junco",
-    "habitat": "urban, forest",
-    "color": "gray, black,",
+    "habitat": [ "urban",
+                 "forest" ],
+    "color": [ "gray",
+               "black" ],
     "size": "small",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/junco1.jpg",
+               "./images/junco2.jpg",
+               "./images/junco3.jpg",
+               "./images/junco4.png" ]
   },
 
   {
     "birdID": "003",
     "name": "House Finch",
-    "habitat": "urban, forest",
-    "color": "buff/brown, white",
+    "habitat": [ "urban",
+                 "forest" ],
+    "color": [ "buff/brown",
+               "white" ],
     "size": "small",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/housefinch1.jpg",
+               "./images/housefinch2.jpg",
+               "./images/housefinch3.jpg",
+               "./images/housefinch4.jpg" ]
   },
 
   {
     "birdID": "004",
     "name": "Northern Flicker",
     "habitat": "forest",
-    "color": "buff/brown, yellow",
+    "color": [ "buff/brown",
+               "yellow" ],
     "size": "medium",
-    "behavior": "ground foraging, soaring, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "soaring",
+                  "in tree/bush" ],
+    "image": [ "./images/flicker1.jpg",
+               "./images/flicker2.jpg" ]
   },
 
   {
     "birdID": "005",
     "name": "Scrub Jay",
-    "habitat": "forest, urban",
-    "color": "blue, gray",
+    "habitat": [ "forest",
+                 "urban" ],
+    "color": [ "blue",
+               "gray" ],
     "size": "medium",
-    "behavior": "soaring, ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/scrubjay1.jpg",
+               "./images/scrubjay2.jpg" ]
   },
 
   {
     "birdID": "006",
     "name": "Mallard",
     "habitat": "in/near water",
-    "color": "olive/green, buff/brown",
+    "color": [ "olive/green",
+               "buff/brown",
+               "blue",
+               "white" ],
     "size": "medium",
     "behavior": "swimming/wading",
-    "image": ""
+    "image": [ "./images/mallard1.jpg",
+               "./images/mallard2.jpg" ]
   },
 
   {
     "birdID": "007",
     "name": "Greater Sage-Grouse",
     "habitat": "desert",
-    "color": "",
+    "color": [ "buff/brown",
+               "white" ],
     "size": "medium",
     "behavior": "ground foraging",
-    "image": ""
+    "image": [ "./images/sagegrouse1.jpg",
+               "./images/sagegrouse2.jpg" ]
   },
 
   {
     "birdID": "008",
     "name": "Wild Turkey",
-    "habitat": "desert, urban",
-    "color": "black, red, gray, white",
+    "habitat": [ "desert",
+                 "urban" ],
+    "color": [ "black",
+               "red",
+               "gray",
+               "white" ],
     "size": "large",
     "behavior": "ground foraging",
-    "image": ""
+    "image": [ "./images/turkey1.jpg",
+               "./images/turkey2.jpg" ]
   },
 
   {
     "birdID": "009",
     "name": "Rock Pigeon",
     "habitat": "urban",
-    "color": "gray, red, white, buff/brown",
+    "color": [ "gray",
+               "red",
+               "white",
+               "buff/brown" ],
     "size": "small",
     "behavior": "ground foraging",
-    "image": ""
+    "image": [ "./images/rockpigeon1.jpg",
+               "./images/rockpigeon2.jpg" ]
   },
 
   {
     "birdID": "010",
     "name": "Canada Goose",
-    "habitat": "in/near water, urban",
-    "color": "black, gray, white",
+    "habitat": [ "in/near water",
+                 "urban" ],
+    "color": [ "black",
+               "gray",
+               "white" ],
     "size": "large",
-    "behavior": "swimming/wading, ground foraging, soaring",
-    "image": ""
+    "behavior": [ "swimming/wading",
+                  "ground foraging",
+                  "soaring" ],
+    "image": [ "./images/canada1.jpg",
+               "./images/canada2.jpg" ]
   },
 
   {
     "birdID": "011",
     "name": "Cackling Goose",
-    "habitat": "urban, in/near water",
-    "color": "black, gray, white",
+    "habitat": [ "urban",
+                 "in/near water" ],
+    "color": [ "black",
+               "gray",
+               "white" ],
     "size": "medium",
-    "behavior": "swimming/wading, ground foraging",
-    "image": ""
+    "behavior": [ "swimming/wading",
+                  "ground foraging" ],
+    "image": [ "./images/cackling1.jpg",
+               "./images/cackling2.jpg" ]
   },
 
   {
     "birdID": "012",
     "name": "Osprey",
-    "habitat": "in/near water, urban",
-    "color": "white, buff/brown, gray",
+    "habitat": [ "in/near water",
+                 "urban" ],
+    "color": [ "white",
+               "buff/brown",
+               "gray" ],
     "size": "large",
-    "behavior": "soaring, swimming/wading, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "swimming/wading",
+                  "in tree/bush" ],
+    "image": [ "./images/osprey1.jpg",
+               "./images/osprey2.jpg",
+               "./images/osprey3.jpg" ]
   },
 
   {
     "birdID": "013",
     "name": "Bald Eagle",
-    "habitat": "in/near water, forest, urban, desert",
-    "color": "buff/brown, white",
+    "habitat": [ "in/near water",
+                 "forest",
+                 "urban",
+                 "desert" ],
+    "color": [ "buff/brown",
+               "white" ],
     "size": "XL",
-    "behavior": "soaring, swimming/wading, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "swimming/wading",
+                  "in tree/bush" ],
+    "image": [ "./images/bald1.jpg",
+               "./images/bald2.jpg",
+               "./images/bald3.jpg" ]
   },
 
   {
     "birdID": "014",
     "name": "Turkey Vulture",
-    "habitat": "desert, urban, forest",
+    "habitat": [ "desert",
+                 "urban",
+                 "forest" ],
     "color": "black",
     "size": "XL",
     "behavior": "soaring",
-    "image": ""
+    "image": [ "./images/tvulture1.jpg",
+               "./images/tvulture2.jpg" ]
   },
 
   {
     "birdID": "015",
     "name": "Barn Swallow",
-    "habitat": "urban, forest",
-    "color": "blue,",
+    "habitat": [ "urban",
+                 "forest" ],
+    "color": [ "blue",
+               "orange",
+               "white" ],
     "size": "small",
-    "behavior": "soaring, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "in tree/bush" ],
+    "image": [ "./images/barnswallow1.jpg",
+               "./images/barnswallow2.jpg" ]
   },
 
   {
     "birdID": "016",
     "name": "Chimney Swift",
-    "habitat": "urban, forest",
+    "habitat": [ "urban",
+                 "forest" ],
     "color": "buff/brown",
     "size": "small",
     "behavior": "soaring",
-    "image": ""
+    "image": [ "./images/chimney1.jpg",
+               "./images/chimney2.jpg" ]
   },
 
   {
     "birdID": "017",
     "name": "Killdeer",
-    "habitat": "urban, forest, in/near water",
-    "color": "buff/brown, white, black",
+    "habitat": [ "urban",
+                 "in/near water" ],
+    "color": [ "buff/brown",
+               "white",
+               "black" ],
     "size": "small",
-    "behavior": "swimming/wading, ground foraging, soaring",
-    "image": ""
+    "behavior": [ "swimming/wading",
+                  "ground foraging" ],
+    "image": [ "./images/killdeer1.jpg",
+               "./images/killdeer2.jpg" ]
   },
 
   {
     "birdID": "018",
     "name": "Great Blue Heron",
-    "habitat": "in/near water, urban",
-    "color": "gray, blue, ",
+    "habitat": [ "in/near water",
+                 "urban" ],
+    "color": [ "gray",
+               "blue" ],
     "size": "XL",
-    "behavior": "swimming/wading, soaring",
-    "image": ""
+    "behavior": [ "swimming/wading",
+                  "soaring" ],
+    "image": [ "./images/blueheron1.jpg",
+               "./images/blueheron2.jpg",
+               "./images/blueheron3.jpg" ]
   },
 
   {
     "birdID": "019",
     "name": "Cattle Egret",
-    "habitat": "urban, in/near water",
-    "color": "white, yellow",
+    "habitat": [ "urban",
+                 "in/near water" ],
+    "color": [ "white",
+               "yellow" ],
     "size": "medium",
-    "behavior": "ground foraging, swimming/wading",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "swimming/wading" ],
+    "image": [ "./images/cattleegret1.jpg",
+               "./images/cattleegret2.jpg ]"
   },
 
   {
     "birdID": "020",
     "name": "Red-Tailed Hawk",
-    "habitat": "urban, forest, desert",
-    "color": "buff/brown, red",
+    "habitat": [ "urban",
+                 "forest",
+                 "desert" ],
+    "color": [ "buff/brown",
+                "red" ],
     "size": "large",
-    "behavior": "soaring, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "in tree/bush" ],
+    "image": [ "./images/redtail1.jpg",
+               "./images/redtail2.jpg" ]
   },
 
   {
     "birdID": "021",
     "name": "Barred Owl",
     "habitat": "forest",
-    "color": "gray, black",
+    "color": [ "gray",
+               "black" ],
     "size": "large",
-    "behavior": "soaring, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "in tree/bush" ],
+    "image": [ "./images/barred1.jpg",
+               "./images/barred2.jpg" ]
   },
 
   {
     "birdID": "022",
     "name": "Western Screech Owl",
-    "habitat": "urban, forest",
+    "habitat": [ "urban",
+                 "forest" ],
     "color": "buff/brown",
-    "size": "small, medium",
-    "behavior": "soaring, in tree/bush",
-    "image": ""
+    "size": [ "small",
+              "medium" ],
+    "behavior": [ "soaring",
+                  "in tree/bush" ],
+    "image": [ "./images/westernscreech1.jpg",
+               "./images/westernscreech2.jpg",
+               "./images/westernscreech3.jpg" ]
   },
 
   {
     "birdID": "023",
     "name": "Belted Kingfisher",
     "habitat": "in/near water",
-    "color": "blue, black, white",
-    "size": "medium, small",
-    "behavior": "swimming/wading, soaring, in tree/bush",
-    "image": ""
+    "color": [ "blue",
+               "black",
+               "white" ],
+    "size": [ "medium",
+              "small" ],
+    "behavior": [ "swimming/wading",
+                  "soaring",
+                  "in tree/bush" ],
+    "image": [ "./images/beltedking1.jpg",
+               "./images/beltedking2.jpg" ]
   },
 
   {
     "birdID": "024",
     "name": "Hairy Woodpecker",
     "habitat": "forest",
-    "color": "black, white, red",
+    "color": [ "black",
+               "white",
+               "red" ],
     "size": "medium",
     "behavior": "in tree/bush",
-    "image": ""
+    "image": [ "./images/hairywood1.jpg",
+               "./images/hairywood2.jpg",
+               "./images/hairywood3.jpg" ]
   },
 
   {
     "birdID": "025",
     "name": "Downy Woodpecker",
     "habitat": "forest",
-    "color": "black, white, red",
+    "color": [ "black",
+               "white",
+               "red" ],
     "size": "small",
     "behavior": "in tree/bush",
-    "image": ""
+    "image": [ "./images/downywood1.jpg",
+               "./images/downywood2.jpg",
+               "./images/downywood3.jpg" ]
   },
 
   {
     "birdID": "026",
     "name": "Least Flycatcher",
     "habitat": "forest",
-    "color": "gray, buff/brown",
+    "color": [ "gray",
+               "buff/brown" ],
     "size": "small",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/leastfly1.jpg",
+               "./images/leastfly2.jpg" ]
   },
 
   {
     "birdID": "027",
     "name": "Yellow Throated Vireo",
     "habitat": "forest",
-    "color": "yellow, gray, white",
+    "color": [ "yellow",
+               "gray",
+               "white" ],
     "size": "small",
-    "behavior": "in tree/bush, ground foraging",
-    "image": ""
+    "behavior": [ "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/yellowvireo1.jpg",
+               "./images/yellowvireo2.jpg" ]
   },
 
   {
     "birdID": "028",
     "name": "Loggerhead Shrike",
     "habitat": "forest",
-    "color": "buff/brown, gray,",
+    "color": [ "buff/brown",
+               "gray",
+               "black" ],
     "size": "medium",
     "behavior": "in tree/bush",
-    "image": ""
+    "image": [ "./images/loggerhead1.jpg",
+               "./images/loggerhead2.jpg",
+               "./images/loggerhead3.jpg" ]
   },
 
   {
     "birdID": "029",
     "name": "Stellar's Jay",
-    "habitat": "forest, urban",
-    "color": "black, blue",
-    "size": "medium, small",
-    "behavior": "in tree/bush, ground foraging",
-    "image": ""
+    "habitat": [ "forest",
+                 "urban" ],
+    "color": [ "black",
+               "blue" ],
+    "size": [ "medium",
+              "small" ],
+    "behavior": [ "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/stellar1.jpg",
+               "./images/stellar2.jpg" ]
   },
 
   {
     "birdID": "030",
     "name": "Black-Billed Magpie",
-    "habitat": "urban, forest, desert",
-    "color": "black, white",
+    "habitat": [ "urban",
+                 "forest",
+                 "desert" ],
+    "color": [ "black",
+               "white" ],
     "size": "medium",
-    "behavior": "soaring, in tree/bush, ground foraging",
-    "image": ""
+    "behavior": [ "soaring",
+                  "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/bbmagpie1.jpg",
+               "./images/bbmagpie2.jpg",
+               "./images/bbmagpie3.jpg" ]
   },
 
   {
     "birdID": "031",
     "name": "Common Raven",
-    "habitat": "urban, desert, forest",
+    "habitat": [ "urban",
+                 "desert",
+                 "forest" ],
     "color": "black",
     "size": "medium",
-    "behavior": "soaring, ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/raven1.jpg",
+               "./images/craven2.jpg",
+               "./images/craven3.jpg" ]
   },
 
   {
     "birdID": "032",
     "name": "American Crow",
-    "habitat": "urban, desert, forest",
+    "habitat": [ "urban",
+                 "desert",
+                 "forest" ],
     "color": "black",
     "size": "medium",
-    "behavior": "soaring, ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "soaring",
+                  "ground foraging", "in tree/bush" ],
+    "image": [ "./images/acrow1.jpg",
+               "./images/acrow2.jpg" ]
   },
 
   {
     "birdID": "033",
     "name": "Mountain Chickadee",
-    "habitat": "forest, urban",
-    "color": "gray, white, black",
+    "habitat": [ "forest",
+                 "urban" ],
+    "color": [ "gray",
+               "white",
+               "black" ],
     "size": "small",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/mchickadee1.jpg",
+               "./images/mchickadee2.jpg" ]
   },
 
   {
     "birdID": "034",
     "name": "Western Bluebird",
-    "habitat": "forest, desert, urban",
-    "color": "blue, orange, gray",
+    "habitat": [ "forest",
+                 "desert",
+                 "urban" ],
+    "color": [ "blue",
+               "orange",
+               "gray" ],
     "size": "small",
-    "behavior": "in tree/bush, ground foraging",
-    "image": ""
+    "behavior": [ "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/wbluebird1.jpg",
+               "./images/wbluebird2.jpg",
+               "./images/wbluebird3.jpg" ]
   },
 
   {
     "birdID": "035",
     "name": "Northern Mockingbird",
-    "habitat": "urban, forest, desert",
-    "color": "buff/brown, gray",
+    "habitat": [ "urban",
+                 "forest",
+                 "desert" ],
+    "color": [ "buff/brown",
+               "gray",
+               "white",
+               "black" ],
     "size": "medium",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/nmockingbird1.jpg",
+               "./images/nmockingbird2.jpg",
+               "./images/nmockingbird3.jpg" ]
   },
 
   {
     "birdID": "036",
     "name": "European Starling",
     "habitat": "urban",
-    "color": "black, yellow",
+    "color": [ "black",
+              "yellow" ],
     "size": "small",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/estarling1.jpg",
+               "./images/estarling2.jpg",
+               "./images/starling3.jpg" ]
   },
 
   {
@@ -365,118 +539,188 @@
     "habitat": "forest",
     "color": "gray",
     "size": "small",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/gcatbird1.jpg",
+               "./images/gcatbird2.jpg",
+               "./images/gcatbird3.jpg" ]
   },
 
   {
     "birdID": "038",
     "name": "Cedar Waxwing",
-    "habitat": "forest",
-    "color": "buff/brown, black",
+    "habitat": [ "forest",
+                 "urban" ],
+    "color": [ "buff/brown",
+               "black" ],
     "size": "small",
-    "behavior": "in tree/bush, ground foraging, in/near water",
-    "image": ""
+    "behavior": [ "in tree/bush",
+                  "ground foraging",
+                  "in/near water" ],
+    "image": [ "./images/cwaxwing1.jpg",
+               "./images/cwaxwing2.jpg",
+               "./images/cwaxwing3.jpg" ]
   },
 
   {
     "birdID": "039",
     "name": "Yellow Rumped Warbler",
     "habitat": "forest",
-    "color": "gray, black, white, yellow",
+    "color": [ "gray",
+               "black",
+               "white",
+               "yellow" ],
     "size": "small",
     "behavior": "in tree/bush",
-    "image": ""
+    "image": [ "./images/yrwarbler1.jpg",
+               "./images/yrwarbler2.jpg",
+               "./images/yrwarbler3.jpg" ]
   },
 
   {
     "birdID": "040",
     "name": "Pine Siskin",
     "habitat": "forest",
-    "color": "buff/brown, black, gray, white",
+    "color": [ "buff/brown",
+               "black",
+               "gray",
+               "white" ],
     "size": "small",
-    "behavior": "in tree/bush, ground foraging",
-    "image": ""
+    "behavior": [ "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/siskin1.jpg",
+               "./images/siskin2.jpg",
+               "./images/siskin3.jpg" ]
   },
 
   {
     "birdID": "041",
     "name": "Rose-Breasted Grosbeak",
-    "habitat": "urban, desert, forest",
-    "color": "black, white, red",
+    "habitat": [ "urban",
+                 "desert",
+                 "forest" ],
+    "color": [ "black",
+               "white",
+               "red",
+               "buff/brown" ],
     "size": "small",
-    "behavior": "in tree/bush, ground foraging",
-    "image": ""
+    "behavior": [ "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/rbgrosbeak1.jpg",
+               "./images/rbgrosbeak2.jpg",
+               "./images/rbgrosbeak3.jpg" ]
   },
 
   {
     "birdID": "042",
     "name": "Dickcissel",
     "habitat": "forest",
-    "color": "gray, buff/brown",
+    "color": [ "gray",
+               "buff/brown" ],
     "size": "small",
-    "behavior": "in tree/bush, ground foraging",
-    "image": ""
+    "behavior": [ "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/dickcissel1.jpg",
+               "./images/dickcissel2.jpg",
+               "./images/dickcissel3.jpg" ]
   },
 
   {
     "birdID": "043",
     "name": "Scarlet Tanager",
     "habitat": "forest",
-    "color": "orange, red, yellow, black",
+    "color": [ "orange",
+               "red",
+               "yellow",
+               "black" ],
     "size": "small",
     "behavior": "in tree/bush",
-    "image": ""
+    "image": [ "./images/stanager1.jpg",
+               "./images/stanager2.jpg",
+               "./images/stanager3.jpg" ]
   },
 
   {
     "birdID": "044",
     "name": "Brewer's Blackbird",
-    "habitat": "forest, urban",
-    "color": "black, buff/brown",
+    "habitat": [ "forest",
+                 "urban" ],
+    "color": [ "black",
+               "buff/brown" ],
     "size": "small",
-    "behavior": "ground foraging, in tree/bush",
-    "image": ""
+    "behavior": [ "ground foraging",
+                  "in tree/bush" ],
+    "image": [ "./images/bblackbird1.jpg",
+               "./images/bblackbird2.jpg",
+               "./images/bblackbird3.jpg" ]
   },
 
   {
     "birdID": "045",
     "name": "Western Meadowlark",
-    "habitat": "urban, forest, desert",
-    "color": "buff/brown, gray",
+    "habitat": [ "urban",
+                 "forest",
+                 "desert" ],
+    "color": [ "buff/brown",
+               "gray",
+               "yellow",
+               "black" ],
     "size": "small",
-    "behavior": "in tree/bush, ground foraging",
-    "image": ""
+    "behavior": [ "in tree/bush",
+                  "ground foraging" ],
+    "image": [ "./images/wmeadowlark1.jpg",
+               "./images/wmeadowlark2.jpg",
+               "./images/wmeadowlark3.jpg",
+               "./images/wmeadowlark4.jpg" ]
   },
 
   {
     "birdID": "046",
     "name": "Cliff Swallow",
     "habitat": "forest",
-    "color": "buff/brown, white, gray, black",
+    "color": [ "buff/brown",
+               "white",
+               "gray",
+               "black" ],
     "size": "small",
     "behavior": "soaring",
-    "image": ""
+    "image": [ "./images/cswallow1.jpg",
+               "./images/cswallow2.jpg",
+               "./images/cswallow3.jpg" ]
   },
 
   {
     "birdID": "047",
     "name": "American Kestrel",
-    "habitat": "forest, urban, desert",
-    "color": "orange, buff/brown, black, white, gray",
-    "size": "small, medium",
-    "behavior": "soaring, in tree/bush",
-    "image": ""
+    "habitat": [ "forest",
+                 "urban",
+                 "desert" ],
+    "color": [ "orange",
+               "buff/brown",
+               "black",
+               "white",
+               "gray" ],
+    "size": [ "small",
+              "medium" ],
+    "behavior": [ "soaring",
+                  "in tree/bush" ],
+    "image": [ "./images/akestrel1.jpg",
+               "./images/akestrel2.jpeg",
+               "./images/akestrel3.jpg" ]
   },
 
   {
     "birdID": "048",
     "name": "Trumpeter Swan",
     "habitat": "in/near water",
-    "color": "black, white,",
+    "color": [ "black",
+               "white" ],
     "size": "XL",
-    "behavior": "swimming/wading, soaring",
-    "image": ""
+    "behavior": [ "swimming/wading",
+                  "soaring" ],
+    "image": [ "./images/tswan1.jpg",
+               "./images/tswan2.jpg",
+               "./images/tswan3.jpg" ]
   },
 
   {
@@ -484,22 +728,28 @@
     "name": "White Ibis",
     "habitat": "in/near water",
     "color": "white",
-    "size": "medium, large",
-    "behavior": "in/near water, soaring",
-    "image": ""
+    "size": [ "medium",
+              "small" ],
+    "behavior": [ "in/near water",
+                  "soaring" ],
+    "image": [ "./images/wibis1.jpg",
+               "./images/wibis2.jpg",
+               "./images/wibis3.jpg" ]
   },
 
   {
     "birdID": "050",
     "name": "Brandt's Cormorant",
     "habitat": "in/near water",
-    "color": "black",
-    "size": "medium, large",
-    "behavior": "swimming/wading, soaring",
-    "image": ""
-  }
-
-
-
-
+    "color": [ "black",
+               "blue" ],
+    "size": [ "medium",
+              "large" ],
+    "behavior": [ "swimming/wading",
+                  "soaring" ],
+    "image": [ "./images/bcormorant1.jpg",
+               "./images/bcormorant2.jpg",
+               "./images/bcormorant3.jpg",
+               "./images/bcormorant4.jpg" ]
+  },
 ]
