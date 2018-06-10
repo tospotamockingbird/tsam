@@ -1,8 +1,9 @@
 'use strict';
 
-// shows potential birds results
-
 BirdData.all = [];
+const filterResults = [];
+
+// shows potential birds results
 
 function BirdData(birdDataObj) {
     this.birdID = birdDataObj.birdID;
@@ -21,6 +22,16 @@ BirdData.prototype.toHtml = function() {
 };
 
 BirdData.loadAll = function(rawBirdData) {
+    
+    // filters
+    rawBirdData.forEach(function(birdObject) {
+        
+        if (birdObject.size === 'small') {
+            filterResults.push(new BirdData(birdObject));
+        }
+    })
+
+    // remove when filter works correctly
     rawBirdData.forEach(function(birdObject) {
         BirdData.all.push(new BirdData(birdObject));
     })
@@ -44,3 +55,15 @@ BirdData.fetchAll = function() {
         });
     };
 };
+
+// filters potential birds results
+// BirdData.filter = function(rawBirdData) {
+//     const filterResults = [];
+    
+//     rawBirdData.forEach(function(birdObject) {
+        
+//         if (birdObject.size === 'small') {
+//             filterResults.push(new BirdData(birdObject));
+//         }
+//     })
+// };
