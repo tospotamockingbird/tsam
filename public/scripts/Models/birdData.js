@@ -26,14 +26,14 @@ BirdData.loadAll = function(rawBirdData) {
     // filters
     rawBirdData.forEach(function(birdObject) {
         
+        // const smallBirds = $('#small');
+        // if (smallBirds.checked) {
+        //     console.log('checked');
+        // }
+
         if (birdObject.size === 'small') {
             filterResults.push(new BirdData(birdObject));
         }
-    })
-
-    // remove when filter works correctly
-    rawBirdData.forEach(function(birdObject) {
-        BirdData.all.push(new BirdData(birdObject));
     })
 };
 
