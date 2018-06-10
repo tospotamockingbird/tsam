@@ -114,9 +114,8 @@ function initMap() {
       $.ajax(washington)
     )
     .done( (oregon, washington) => {
-      let response = oregon[0].concat(washington[0]);
-      console.log(response);
-      response.forEach( bird => {
+      let orWA = oregon[0].concat(washington[0]);
+      orWA.forEach( bird => {
         let location = {lat: bird.lat, lng: bird.lng};
         let marker = new google.maps.Marker({position: location, map: map});
         let contentString = `<div class="info-window"><h1>${bird.comName}</h1><strong>Location: </strong>${bird.locName}<br><strong>Date: </strong>${bird.obsDt}<br><strong>Count: </strong>${bird.howMany}`;
