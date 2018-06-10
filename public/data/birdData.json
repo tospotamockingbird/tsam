@@ -7,10 +7,10 @@
                "red" ],
     "size": "small",
     "behavior": "ground foraging, in tree/bush",
-    "image": [ "./images/robin1.jpg",
-               "./images/robin2.jpg",
-               "./images/robin3.jpg",
-               "./images/robin4.jpg" ]
+    "image": [ "../images/robin1.jpg",
+               "../images/robin2.jpg",
+               "../images/robin3.jpg",
+               "../images/robin4.jpg" ]
   },
 
   {
@@ -23,10 +23,10 @@
     "size": "small",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/junco1.jpg",
-               "./images/junco2.jpg",
-               "./images/junco3.jpg",
-               "./images/junco4.png" ]
+    "image": [ "../images/junco1.jpg",
+               "../images/junco2.jpg",
+               "../images/junco3.jpg",
+               "../images/junco4.png" ]
   },
 
   {
@@ -39,10 +39,10 @@
     "size": "small",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/housefinch1.jpg",
-               "./images/housefinch2.jpg",
-               "./images/housefinch3.jpg",
-               "./images/housefinch4.jpg" ]
+    "image": [ "../images/housefinch1.jpg",
+               "../images/housefinch2.jpg",
+               "../images/housefinch3.jpg",
+               "../images/housefinch4.jpg" ]
   },
 
   {
@@ -55,8 +55,8 @@
     "behavior": [ "ground foraging",
                   "soaring",
                   "in tree/bush" ],
-    "image": [ "./images/flicker1.jpg",
-               "./images/flicker2.jpg" ]
+    "image": [ "../images/flicker1.jpg",
+               "../images/flicker2.jpg" ]
   },
 
   {
@@ -70,8 +70,8 @@
     "behavior": [ "soaring",
                   "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/scrubjay1.jpg",
-               "./images/scrubjay2.jpg" ]
+    "image": [ "../images/scrubjay1.jpg",
+               "../images/scrubjay2.jpg" ]
   },
 
   {
@@ -84,8 +84,8 @@
                "white" ],
     "size": "medium",
     "behavior": "swimming/wading",
-    "image": [ "./images/mallard1.jpg",
-               "./images/mallard2.jpg" ]
+    "image": [ "../images/mallard1.jpg",
+               "../images/mallard2.jpg" ]
   },
 
   {
@@ -96,8 +96,8 @@
                "white" ],
     "size": "medium",
     "behavior": "ground foraging",
-    "image": [ "./images/sagegrouse1.jpg",
-               "./images/sagegrouse2.jpg" ]
+    "image": [ "../images/sagegrouse1.jpg",
+               "../images/sagegrouse2.jpg" ]
   },
 
   {
@@ -111,8 +111,8 @@
                "white" ],
     "size": "large",
     "behavior": "ground foraging",
-    "image": [ "./images/turkey1.jpg",
-               "./images/turkey2.jpg" ]
+    "image": [ "../images/turkey1.jpg",
+               "../images/turkey2.jpg" ]
   },
 
   {
@@ -125,8 +125,8 @@
                "buff/brown" ],
     "size": "small",
     "behavior": "ground foraging",
-    "image": [ "./images/rockpigeon1.jpg",
-               "./images/rockpigeon2.jpg" ]
+    "image": [ "../images/rockpigeon1.jpg",
+               "../images/rockpigeon2.jpg" ]
   },
 
   {
@@ -141,8 +141,8 @@
     "behavior": [ "swimming/wading",
                   "ground foraging",
                   "soaring" ],
-    "image": [ "./images/canada1.jpg",
-               "./images/canada2.jpg" ]
+    "image": [ "../images/canada1.jpg",
+               "../images/canada2.jpg" ]
   },
 
   {
@@ -156,8 +156,8 @@
     "size": "medium",
     "behavior": [ "swimming/wading",
                   "ground foraging" ],
-    "image": [ "./images/cackling1.jpg",
-               "./images/cackling2.jpg" ]
+    "image": [ "../images/cackling1.jpg",
+               "../images/cackling2.jpg" ]
   },
 
   {
@@ -172,9 +172,9 @@
     "behavior": [ "soaring",
                   "swimming/wading",
                   "in tree/bush" ],
-    "image": [ "./images/osprey1.jpg",
-               "./images/osprey2.jpg",
-               "./images/osprey3.jpg" ]
+    "image": [ "../images/osprey1.jpg",
+               "../images/osprey2.jpg",
+               "../images/osprey3.jpg" ]
   },
 
   {
@@ -190,9 +190,9 @@
     "behavior": [ "soaring",
                   "swimming/wading",
                   "in tree/bush" ],
-    "image": [ "./images/bald1.jpg",
-               "./images/bald2.jpg",
-               "./images/bald3.jpg" ]
+    "image": [ "../images/bald1.jpg",
+               "../images/bald2.jpg",
+               "../images/bald3.jpg" ]
   },
 
   {
@@ -204,8 +204,8 @@
     "color": "black",
     "size": "XL",
     "behavior": "soaring",
-    "image": [ "./images/tvulture1.jpg",
-               "./images/tvulture2.jpg" ]
+    "image": [ "../images/tvulture1.jpg",
+               "../images/tvulture2.jpg" ]
   },
 
   {
@@ -219,8 +219,8 @@
     "size": "small",
     "behavior": [ "soaring",
                   "in tree/bush" ],
-    "image": [ "./images/barnswallow1.jpg",
-               "./images/barnswallow2.jpg" ]
+    "image": [ "../images/barnswallow1.jpg",
+               "../images/barnswallow2.jpg" ]
   },
 
   {
@@ -231,8 +231,8 @@
     "color": "buff/brown",
     "size": "small",
     "behavior": "soaring",
-    "image": [ "./images/chimney1.jpg",
-               "./images/chimney2.jpg" ]
+    "image": [ "../images/chimney1.jpg",
+               "../images/chimney2.jpg" ]
   },
 
   {
@@ -246,8 +246,8 @@
     "size": "small",
     "behavior": [ "swimming/wading",
                   "ground foraging" ],
-    "image": [ "./images/killdeer1.jpg",
-               "./images/killdeer2.jpg" ]
+    "image": [ "../images/killdeer1.jpg",
+               "../images/killdeer2.jpg" ]
   },
 
   {
@@ -260,9 +260,9 @@
     "size": "XL",
     "behavior": [ "swimming/wading",
                   "soaring" ],
-    "image": [ "./images/blueheron1.jpg",
-               "./images/blueheron2.jpg",
-               "./images/blueheron3.jpg" ]
+    "image": [ "../images/blueheron1.jpg",
+               "../images/blueheron2.jpg",
+               "../images/blueheron3.jpg" ]
   },
 
   {
@@ -275,8 +275,8 @@
     "size": "medium",
     "behavior": [ "ground foraging",
                   "swimming/wading" ],
-    "image": [ "./images/cattleegret1.jpg",
-               "./images/cattleegret2.jpg ]"
+    "image": [ "../images/cattleegret1.jpg",
+               "../images/cattleegret2.jpg ]"
   },
 
   {
@@ -290,8 +290,8 @@
     "size": "large",
     "behavior": [ "soaring",
                   "in tree/bush" ],
-    "image": [ "./images/redtail1.jpg",
-               "./images/redtail2.jpg" ]
+    "image": [ "../images/redtail1.jpg",
+               "../images/redtail2.jpg" ]
   },
 
   {
@@ -303,8 +303,8 @@
     "size": "large",
     "behavior": [ "soaring",
                   "in tree/bush" ],
-    "image": [ "./images/barred1.jpg",
-               "./images/barred2.jpg" ]
+    "image": [ "../images/barred1.jpg",
+               "../images/barred2.jpg" ]
   },
 
   {
@@ -317,9 +317,9 @@
               "medium" ],
     "behavior": [ "soaring",
                   "in tree/bush" ],
-    "image": [ "./images/westernscreech1.jpg",
-               "./images/westernscreech2.jpg",
-               "./images/westernscreech3.jpg" ]
+    "image": [ "../images/westernscreech1.jpg",
+               "../images/westernscreech2.jpg",
+               "../images/westernscreech3.jpg" ]
   },
 
   {
@@ -334,8 +334,8 @@
     "behavior": [ "swimming/wading",
                   "soaring",
                   "in tree/bush" ],
-    "image": [ "./images/beltedking1.jpg",
-               "./images/beltedking2.jpg" ]
+    "image": [ "../images/beltedking1.jpg",
+               "../images/beltedking2.jpg" ]
   },
 
   {
@@ -347,9 +347,9 @@
                "red" ],
     "size": "medium",
     "behavior": "in tree/bush",
-    "image": [ "./images/hairywood1.jpg",
-               "./images/hairywood2.jpg",
-               "./images/hairywood3.jpg" ]
+    "image": [ "../images/hairywood1.jpg",
+               "../images/hairywood2.jpg",
+               "../images/hairywood3.jpg" ]
   },
 
   {
@@ -361,9 +361,9 @@
                "red" ],
     "size": "small",
     "behavior": "in tree/bush",
-    "image": [ "./images/downywood1.jpg",
-               "./images/downywood2.jpg",
-               "./images/downywood3.jpg" ]
+    "image": [ "../images/downywood1.jpg",
+               "../images/downywood2.jpg",
+               "../images/downywood3.jpg" ]
   },
 
   {
@@ -375,8 +375,8 @@
     "size": "small",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/leastfly1.jpg",
-               "./images/leastfly2.jpg" ]
+    "image": [ "../images/leastfly1.jpg",
+               "../images/leastfly2.jpg" ]
   },
 
   {
@@ -389,8 +389,8 @@
     "size": "small",
     "behavior": [ "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/yellowvireo1.jpg",
-               "./images/yellowvireo2.jpg" ]
+    "image": [ "../images/yellowvireo1.jpg",
+               "../images/yellowvireo2.jpg" ]
   },
 
   {
@@ -402,9 +402,9 @@
                "black" ],
     "size": "medium",
     "behavior": "in tree/bush",
-    "image": [ "./images/loggerhead1.jpg",
-               "./images/loggerhead2.jpg",
-               "./images/loggerhead3.jpg" ]
+    "image": [ "../images/loggerhead1.jpg",
+               "../images/loggerhead2.jpg",
+               "../images/loggerhead3.jpg" ]
   },
 
   {
@@ -418,8 +418,8 @@
               "small" ],
     "behavior": [ "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/stellar1.jpg",
-               "./images/stellar2.jpg" ]
+    "image": [ "../images/stellar1.jpg",
+               "../images/stellar2.jpg" ]
   },
 
   {
@@ -434,9 +434,9 @@
     "behavior": [ "soaring",
                   "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/bbmagpie1.jpg",
-               "./images/bbmagpie2.jpg",
-               "./images/bbmagpie3.jpg" ]
+    "image": [ "../images/bbmagpie1.jpg",
+               "../images/bbmagpie2.jpg",
+               "../images/bbmagpie3.jpg" ]
   },
 
   {
@@ -450,9 +450,9 @@
     "behavior": [ "soaring",
                   "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/raven1.jpg",
-               "./images/craven2.jpg",
-               "./images/craven3.jpg" ]
+    "image": [ "../images/raven1.jpg",
+               "../images/craven2.jpg",
+               "../images/craven3.jpg" ]
   },
 
   {
@@ -465,8 +465,8 @@
     "size": "medium",
     "behavior": [ "soaring",
                   "ground foraging", "in tree/bush" ],
-    "image": [ "./images/acrow1.jpg",
-               "./images/acrow2.jpg" ]
+    "image": [ "../images/acrow1.jpg",
+               "../images/acrow2.jpg" ]
   },
 
   {
@@ -480,8 +480,8 @@
     "size": "small",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/mchickadee1.jpg",
-               "./images/mchickadee2.jpg" ]
+    "image": [ "../images/mchickadee1.jpg",
+               "../images/mchickadee2.jpg" ]
   },
 
   {
@@ -496,9 +496,9 @@
     "size": "small",
     "behavior": [ "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/wbluebird1.jpg",
-               "./images/wbluebird2.jpg",
-               "./images/wbluebird3.jpg" ]
+    "image": [ "../images/wbluebird1.jpg",
+               "../images/wbluebird2.jpg",
+               "../images/wbluebird3.jpg" ]
   },
 
   {
@@ -514,9 +514,9 @@
     "size": "medium",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/nmockingbird1.jpg",
-               "./images/nmockingbird2.jpg",
-               "./images/nmockingbird3.jpg" ]
+    "image": [ "../images/nmockingbird1.jpg",
+               "../images/nmockingbird2.jpg",
+               "../images/nmockingbird3.jpg" ]
   },
 
   {
@@ -528,9 +528,9 @@
     "size": "small",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/estarling1.jpg",
-               "./images/estarling2.jpg",
-               "./images/starling3.jpg" ]
+    "image": [ "../images/estarling1.jpg",
+               "../images/estarling2.jpg",
+               "../images/starling3.jpg" ]
   },
 
   {
@@ -541,9 +541,9 @@
     "size": "small",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/gcatbird1.jpg",
-               "./images/gcatbird2.jpg",
-               "./images/gcatbird3.jpg" ]
+    "image": [ "../images/gcatbird1.jpg",
+               "../images/gcatbird2.jpg",
+               "../images/gcatbird3.jpg" ]
   },
 
   {
@@ -557,9 +557,9 @@
     "behavior": [ "in tree/bush",
                   "ground foraging",
                   "in/near water" ],
-    "image": [ "./images/cwaxwing1.jpg",
-               "./images/cwaxwing2.jpg",
-               "./images/cwaxwing3.jpg" ]
+    "image": [ "../images/cwaxwing1.jpg",
+               "../images/cwaxwing2.jpg",
+               "../images/cwaxwing3.jpg" ]
   },
 
   {
@@ -572,9 +572,9 @@
                "yellow" ],
     "size": "small",
     "behavior": "in tree/bush",
-    "image": [ "./images/yrwarbler1.jpg",
-               "./images/yrwarbler2.jpg",
-               "./images/yrwarbler3.jpg" ]
+    "image": [ "../images/yrwarbler1.jpg",
+               "../images/yrwarbler2.jpg",
+               "../images/yrwarbler3.jpg" ]
   },
 
   {
@@ -588,9 +588,9 @@
     "size": "small",
     "behavior": [ "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/siskin1.jpg",
-               "./images/siskin2.jpg",
-               "./images/siskin3.jpg" ]
+    "image": [ "../images/siskin1.jpg",
+               "../images/siskin2.jpg",
+               "../images/siskin3.jpg" ]
   },
 
   {
@@ -606,9 +606,9 @@
     "size": "small",
     "behavior": [ "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/rbgrosbeak1.jpg",
-               "./images/rbgrosbeak2.jpg",
-               "./images/rbgrosbeak3.jpg" ]
+    "image": [ "../images/rbgrosbeak1.jpg",
+               "../images/rbgrosbeak2.jpg",
+               "../images/rbgrosbeak3.jpg" ]
   },
 
   {
@@ -620,9 +620,9 @@
     "size": "small",
     "behavior": [ "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/dickcissel1.jpg",
-               "./images/dickcissel2.jpg",
-               "./images/dickcissel3.jpg" ]
+    "image": [ "../images/dickcissel1.jpg",
+               "../images/dickcissel2.jpg",
+               "../images/dickcissel3.jpg" ]
   },
 
   {
@@ -635,9 +635,9 @@
                "black" ],
     "size": "small",
     "behavior": "in tree/bush",
-    "image": [ "./images/stanager1.jpg",
-               "./images/stanager2.jpg",
-               "./images/stanager3.jpg" ]
+    "image": [ "../images/stanager1.jpg",
+               "../images/stanager2.jpg",
+               "../images/stanager3.jpg" ]
   },
 
   {
@@ -650,9 +650,9 @@
     "size": "small",
     "behavior": [ "ground foraging",
                   "in tree/bush" ],
-    "image": [ "./images/bblackbird1.jpg",
-               "./images/bblackbird2.jpg",
-               "./images/bblackbird3.jpg" ]
+    "image": [ "../images/bblackbird1.jpg",
+               "../images/bblackbird2.jpg",
+               "../images/bblackbird3.jpg" ]
   },
 
   {
@@ -668,10 +668,10 @@
     "size": "small",
     "behavior": [ "in tree/bush",
                   "ground foraging" ],
-    "image": [ "./images/wmeadowlark1.jpg",
-               "./images/wmeadowlark2.jpg",
-               "./images/wmeadowlark3.jpg",
-               "./images/wmeadowlark4.jpg" ]
+    "image": [ "../images/wmeadowlark1.jpg",
+               "../images/wmeadowlark2.jpg",
+               "../images/wmeadowlark3.jpg",
+               "../images/wmeadowlark4.jpg" ]
   },
 
   {
@@ -684,9 +684,9 @@
                "black" ],
     "size": "small",
     "behavior": "soaring",
-    "image": [ "./images/cswallow1.jpg",
-               "./images/cswallow2.jpg",
-               "./images/cswallow3.jpg" ]
+    "image": [ "../images/cswallow1.jpg",
+               "../images/cswallow2.jpg",
+               "../images/cswallow3.jpg" ]
   },
 
   {
@@ -704,9 +704,9 @@
               "medium" ],
     "behavior": [ "soaring",
                   "in tree/bush" ],
-    "image": [ "./images/akestrel1.jpg",
-               "./images/akestrel2.jpeg",
-               "./images/akestrel3.jpg" ]
+    "image": [ "../images/akestrel1.jpg",
+               "../images/akestrel2.jpeg",
+               "../images/akestrel3.jpg" ]
   },
 
   {
@@ -718,9 +718,9 @@
     "size": "XL",
     "behavior": [ "swimming/wading",
                   "soaring" ],
-    "image": [ "./images/tswan1.jpg",
-               "./images/tswan2.jpg",
-               "./images/tswan3.jpg" ]
+    "image": [ "../images/tswan1.jpg",
+               "../images/tswan2.jpg",
+               "../images/tswan3.jpg" ]
   },
 
   {
@@ -732,9 +732,9 @@
               "small" ],
     "behavior": [ "in/near water",
                   "soaring" ],
-    "image": [ "./images/wibis1.jpg",
-               "./images/wibis2.jpg",
-               "./images/wibis3.jpg" ]
+    "image": [ "../images/wibis1.jpg",
+               "../images/wibis2.jpg",
+               "../images/wibis3.jpg" ]
   },
 
   {
@@ -747,9 +747,9 @@
               "large" ],
     "behavior": [ "swimming/wading",
                   "soaring" ],
-    "image": [ "./images/bcormorant1.jpg",
-               "./images/bcormorant2.jpg",
-               "./images/bcormorant3.jpg",
-               "./images/bcormorant4.jpg" ]
+    "image": [ "../images/bcormorant1.jpg",
+               "../images/bcormorant2.jpg",
+               "../images/bcormorant3.jpg",
+               "../images/bcormorant4.jpg" ]
   },
 ]
