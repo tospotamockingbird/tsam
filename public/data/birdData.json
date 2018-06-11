@@ -276,7 +276,7 @@
     "behavior": [ "ground foraging",
                   "swimming/wading" ],
     "image": [ "./images/cattleegret1.jpg",
-               "./images/cattleegret2.jpg ]"
+               "./images/cattleegret2.jpg"]
   },
 
   {
@@ -751,5 +751,5 @@
                "./images/bcormorant2.jpg",
                "./images/bcormorant3.jpg",
                "./images/bcormorant4.jpg" ]
-  },
+  }
 ]

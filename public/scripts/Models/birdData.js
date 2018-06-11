@@ -23,17 +23,8 @@ BirdData.prototype.toHtml = function() {
 
 BirdData.loadAll = function(rawBirdData) {
     
-    // filters
     rawBirdData.forEach(function(birdObject) {
-        
-        // const smallBirds = $('#small');
-        // if (smallBirds.checked) {
-        //     console.log('checked');
-        // }
-
-        if (birdObject.size === 'small') {
-            filterResults.push(new BirdData(birdObject));
-        }
+        BirdData.all.push(new BirdData(birdObject));
     })
 };
 
@@ -43,27 +34,32 @@ BirdData.fetchAll = function() {
         BirdData.loadAll(parsedBirdData);
         indexView.initResults();
     } else {
-        $.ajax({
-            dataType: 'json',
+        $.getJSON({
             url: 'data/birdData.json',
             data: 'data',
             success: function(data) {
                 localStorage.setItem("birdData", JSON.stringify(data));
                 BirdData.loadAll(data);
                 indexView.initResults();
+            },
+            error: function() {
+                console.log('error');
             }
-        });
+        })
     };
 };
 
-// filters potential birds results
-// BirdData.filter = function(rawBirdData) {
-//     const filterResults = [];
+BirdData.buildBirdList = function() {
+    const listButton = document.getElementById("list-button");
     
-//     rawBirdData.forEach(function(birdObject) {
-        
-//         if (birdObject.size === 'small') {
-//             filterResults.push(new BirdData(birdObject));
-//         }
-//     })
-// };
+    listButton.addEventListener("click", BirdData.showBirdList);
+}
+
+BirdData.showBirdList = function() {
+    BirdData.all.forEach(function(result) {
+        $('#filter-results').append(result.toHtml());
+    });
+    console.log('listening');
+}
+
+BirdData.buildBirdList();
