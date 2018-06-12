@@ -1,9 +1,6 @@
 'use strict';
 
 BirdData.all = [];
-const filterResults = [];
-
-// shows potential birds results
 
 function BirdData(birdDataObj) {
     this.birdID = birdDataObj.birdID;
@@ -56,10 +53,24 @@ BirdData.buildBirdList = function() {
 }
 
 BirdData.showBirdList = function() {
-    BirdData.all.forEach(function(result) {
+    const form = document.getElementById('filter');
+    const birdSize = form.size.value;
+    const birdColor = form.color.value;
+    const birdBehavior = form.behavior.value;
+    const birdHabitat = form.habitat.value;
+    
+    const filteredBirds = BirdData.all
+        .filter(data => data.size === birdSize || data.size.includes(birdSize) || birdSize == '')
+        .filter(data => data.color === birdColor || data.color.includes(birdColor) || birdColor == '')
+        .filter(data => data.behavior === birdBehavior || data.behavior.includes(birdBehavior) || birdBehavior == '')
+        .filter(data => data.habitat === birdHabitat || data.habitat.includes(birdHabitat) || birdHabitat == '')
+
+    console.log(filteredBirds);
+    
+    $('#filter-results').empty();
+    filteredBirds.forEach(function(result) {
         $('#filter-results').append(result.toHtml());
     });
-    console.log('listening');
 }
 
 BirdData.buildBirdList();
