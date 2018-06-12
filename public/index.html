@@ -8,7 +8,7 @@
 
         <script id="filter-results-template" type="text/x-handlebars-template">
             <p>{{name}}</p>
-            <img src="{{image}}"></img>
+            <img src="{{image.[0]}}"></img>
         </script>
     </head>
 
@@ -46,33 +46,33 @@
                     <legend>Filter Potential Birds</legend>
                     <label>Color:
                         <br />
-                        <label>Black<input type="checkbox" name="color" value="black" /></label>
-                        <label>Gray<input type="checkbox" name="color" value="gray" /></label>
-                        <label>White<input type="checkbox" name="color" value="white" /></label>
-                        <label>Buff/Brown<input type="checkbox" name="color" value="buff/brown" /></label>
-                        <label>Red<input type="checkbox" name="color" value="red" /></label>
-                        <label>Yellow<input type="checkbox" name="color" value="yellow" /></label>
-                        <label>Olive/Green<input type="checkbox" name="color" value="olive/green" /></label>
-                        <label>Orange<input type="checkbox" name="color" value="orange" /></label>
-                    </label>
+                        <label><input type="checkbox" name="color" value="black" />Black</label>
+                        <label><input type="checkbox" name="color" value="gray" />Gray</label>
+                        <label><input type="checkbox" name="color" value="white" />White</label>
+                        <label><input type="checkbox" name="color" value="buff/brown" />Buff/Brown</label> <br/>
+                        <label><input type="checkbox" name="color" value="red" />Red</label>
+                        <label><input type="checkbox" name="color" value="yellow" />Yellow</label>
+                        <label><input type="checkbox" name="color" value="olive/green" />Olive/Green</label>
+                        <label><input type="checkbox" name="color" value="orange" />Orange</label>
+                    </label> <br/>
                     <label>Size:
                         <br />
-                            <label>Small (Sparrow - Robin)<input id="small" type="radio" name="size" value="small" /></label>
-                            <label>Medium (Crow - Duck)<input type="radio" name="size" value="medium" /></label>
-                            <label>Large (Hawk - Owl)<input type="radio" name="size" value="large" /></label>
-                            <label>Extra-Large (Heron - Eagle - Vulture)<input type="radio" name="size" value="extra-large" /></label>
-                    </label>
+                            <label><input id="small" type="radio" name="size" value="small" />Small (Sparrow - Robin)</label>
+                            <label><input type="radio" name="size" value="medium" />Medium (Crow - Duck)</label>
+                            <label><input type="radio" name="size" value="large" />Large (Hawk - Owl)</label>
+                            <label><input type="radio" name="size" value="extra-large" />Extra-Large (Heron - Eagle - Vulture)</label>
+                    </label> <br/>
                     <label>Behavior:
                         <br />
-                        <label>Soaring<input type="radio" name="behavior" value="soaring" /></label>
-                        <label>Ground Foraging<input type="radio" name="behavior" value="foraging" /></label>
-                        <label>In Tree/Bush<input type="radio" name="behavior" value="in-tree" /></label>
-                        <label>Swimming/Wading<input type="radio" name="behavior" value="swimming" /></label>
-                        <label>None of the Above<input type="radio" name="behavior" value="no-behavior" /></label>
+                        <label><input type="radio" name="behavior" value="soaring" />Soaring</label>
+                        <label><input type="radio" name="behavior" value="foraging" />Ground Foraging</label>
+                        <label><input type="radio" name="behavior" value="in-tree" />In Tree/Bush</label>
+                        <label><input type="radio" name="behavior" value="swimming" />Swimming/Wading</label>
+                        <label><input type="radio" name="behavior" value="no-behavior" />None of the Above</label>
                     </label>
-                    <label>Location<input type="text" name="location" /></label>
-                    <label>Date<input type="date" name="date" /></label>
-                    <label>Upload Picture<input type="file" name="picture" /></label>
+                    <label>Location <input type="text" name="location" /></label> <br/>
+                    <label>Date <input type="date" name="date" /></label> <br/>
+                    <label>Upload Picture <input type="file" name="picture" /></label>
                     <input type="submit" value="Upload" />
                     <input type="submit" name ="filter-submit" value="Show Potential Birds" />
                 </fieldset>
