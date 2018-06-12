@@ -12,7 +12,7 @@ function BirdData(birdDataObj) {
     this.color = birdDataObj.color;
     this.size = birdDataObj.size;
     this.behavior = birdDataObj.behavior;
-    this.image = birdDataObj.image;    
+    this.image = birdDataObj.image;
 };
 
 BirdData.prototype.toHtml = function() {
@@ -22,10 +22,10 @@ BirdData.prototype.toHtml = function() {
 };
 
 BirdData.loadAll = function(rawBirdData) {
-    
+
     // filters
     rawBirdData.forEach(function(birdObject) {
-        
+
         // const smallBirds = $('#small');
         // if (smallBirds.checked) {
         //     console.log('checked');
@@ -59,9 +59,9 @@ BirdData.fetchAll = function() {
 // filters potential birds results
 // BirdData.filter = function(rawBirdData) {
 //     const filterResults = [];
-    
+
 //     rawBirdData.forEach(function(birdObject) {
-        
+
 //         if (birdObject.size === 'small') {
 //             filterResults.push(new BirdData(birdObject));
 //         }

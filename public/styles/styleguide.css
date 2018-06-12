@@ -65,6 +65,10 @@ p {
   color: rgba(225,233,231,1);
 }
 
+img {
+  width: 300px;
+}
+
 main > form {
   display: flex;
   justify-content: space-evenly;
