@@ -113,6 +113,26 @@ footer {
   /* height: 50px; */
 }
 
+/* Follwoing code manipulates the appearance of the profile list table. It's meant to be a table that lists each bird spotted*/
+
+table {
+  margin-left:auto; 
+  margin-right:auto;
+  table-layout: fixed;
+  width: 60%;
+  border: solid black 1px;
+}
+
+#profile-list h2{
+  margin-left:auto; 
+  margin-right:auto;
+  table-layout: fixed;
+  width: 60%;
+}
+
+td img {
+  width: 5em;
+}
 /* rgba(115,97,83) --> grey/brown */
 /* rgba(142,114,97,0.5) --> lighter grey/brown */
 /* rgba(16,105,90) --> green/blue */
