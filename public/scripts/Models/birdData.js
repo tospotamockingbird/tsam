@@ -9,7 +9,7 @@ function BirdData(birdDataObj) {
     this.color = birdDataObj.color;
     this.size = birdDataObj.size;
     this.behavior = birdDataObj.behavior;
-    this.image = birdDataObj.image;    
+    this.image = birdDataObj.image;
 };
 
 BirdData.prototype.toHtml = function() {
@@ -19,7 +19,6 @@ BirdData.prototype.toHtml = function() {
 };
 
 BirdData.loadAll = function(rawBirdData) {
-    
     rawBirdData.forEach(function(birdObject) {
         BirdData.all.push(new BirdData(birdObject));
     })

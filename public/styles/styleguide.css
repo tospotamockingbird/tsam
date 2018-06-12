@@ -38,6 +38,10 @@ a, legend, label {
   text-decoration: none;
 }
 
+label {
+  font-size: 25px;
+}
+
 a:hover {
   text-transform: uppercase;
   color: rgba(81,158,145,1);
@@ -57,19 +61,26 @@ fieldset {
 
 p {
   font-family: 'Cabin', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   color: rgba(225,233,231,1);
 }
 
-main form {
+img {
+  width: 300px;
+}
+
+main > form {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 #knownBird, #filterBird, #discoverBird {
   position: relative;
-  float: left;
   width: 25%;
+}
+
+#filterBird {
+  float: right;
 }
 
 input[type=text]:focus {
@@ -102,6 +113,26 @@ footer {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+/* Follwoing code manipulates the appearance of the profile list table. It's meant to be a table that lists each bird spotted*/
+
+table {
+  margin-left:auto; 
+  margin-right:auto;
+  table-layout: fixed;
+  width: 60%;
+  border: solid black 1px;
+}
+
+#profile-list h2{
+  margin-left:auto; 
+  margin-right:auto;
+  table-layout: fixed;
+  width: 60%;
+}
+
+td img {
+  width: 5em;
+}
 /* rgba(115,97,83) --> grey/brown */
 /* rgba(142,114,97,0.5) --> lighter grey/brown */
 /* rgba(16,105,90) --> green/blue */

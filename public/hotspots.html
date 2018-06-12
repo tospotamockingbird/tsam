@@ -10,7 +10,7 @@
           /* Set the size of the section element that contains the map */
           #map {
             height: 600px;  /* The height is 500 pixels */
-            width: 100%;  /* The width is the width of the web page/parent container */
+            width: 99%;  /* The width is the width of the web page/parent container */
           }
         </style>
       </head>
@@ -27,11 +27,13 @@
           </ul>
       </nav>
     </header>
-    <h3>Where the birds are:</h3>
+    <h2>Bird Hotspot Map</h2>
+    <p>Here are recent bird sightings in Oregon and Washington, provided by users of The Cornell Lab's eBird project.
+    <p>Clicking on the red markers will open an information window with details of each sighting, while dragging and repositioning the entire map will close them.
     <!--Section element for the map -->
     <section id="map"></section>
     <!-- ID here for scripts div so we can select and append the dynamic gmapScript -->
-    <p>Location data provided by: eBird Basic Dataset. Version: EBD_relNov-2017. Cornell Lab of Ornithology, Ithaca, New York. Nov 2017.</p>
+    <caption>Location data provided by: eBird Basic Dataset. Version: EBD_relNov-2017. Cornell Lab of Ornithology, Ithaca, New York. Nov 2017.</caption>
     <div id="scripts">
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
