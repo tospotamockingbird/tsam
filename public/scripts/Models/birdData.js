@@ -1,9 +1,6 @@
 'use strict';
 
 BirdData.all = [];
-const filterResults = [];
-
-// shows potential birds results
 
 function BirdData(birdDataObj) {
     this.birdID = birdDataObj.birdID;
@@ -22,18 +19,8 @@ BirdData.prototype.toHtml = function() {
 };
 
 BirdData.loadAll = function(rawBirdData) {
-
-    // filters
     rawBirdData.forEach(function(birdObject) {
-
-        // const smallBirds = $('#small');
-        // if (smallBirds.checked) {
-        //     console.log('checked');
-        // }
-
-        if (birdObject.size === 'small') {
-            filterResults.push(new BirdData(birdObject));
-        }
+        BirdData.all.push(new BirdData(birdObject));
     })
 };
 
@@ -43,27 +30,46 @@ BirdData.fetchAll = function() {
         BirdData.loadAll(parsedBirdData);
         indexView.initResults();
     } else {
-        $.ajax({
-            dataType: 'json',
+        $.getJSON({
             url: 'data/birdData.json',
             data: 'data',
             success: function(data) {
                 localStorage.setItem("birdData", JSON.stringify(data));
                 BirdData.loadAll(data);
                 indexView.initResults();
+            },
+            error: function() {
+                console.log('error');
             }
-        });
+        })
     };
 };
 
-// filters potential birds results
-// BirdData.filter = function(rawBirdData) {
-//     const filterResults = [];
+BirdData.buildBirdList = function() {
+    const listButton = document.getElementById("list-button");
+    
+    listButton.addEventListener("click", BirdData.showBirdList);
+}
 
-//     rawBirdData.forEach(function(birdObject) {
+BirdData.showBirdList = function() {
+    const form = document.getElementById('filter');
+    const birdSize = form.size.value;
+    const birdColor = form.color.value;
+    const birdBehavior = form.behavior.value;
+    const birdHabitat = form.habitat.value;
+    
+    const filteredBirds = BirdData.all
+        .filter(data => data.size === birdSize || data.size.includes(birdSize) || birdSize == '')
+        .filter(data => data.color === birdColor || data.color.includes(birdColor) || birdColor == '')
+        .filter(data => data.behavior === birdBehavior || data.behavior.includes(birdBehavior) || birdBehavior == '')
+        .filter(data => data.habitat === birdHabitat || data.habitat.includes(birdHabitat) || birdHabitat == '')
 
-//         if (birdObject.size === 'small') {
-//             filterResults.push(new BirdData(birdObject));
-//         }
-//     })
-// };
+    console.log(filteredBirds);
+    
+    $('#filter-results').empty();
+    filteredBirds.forEach(function(result) {
+        $('#filter-results').append(result.toHtml());
+    });
+}
+
+BirdData.buildBirdList();

@@ -41,10 +41,10 @@
                 </fieldset>
             </form>
 
-            <form>
+            <form id="filter">
                 <fieldset id="filterBird">
                     <legend>Filter Potential Birds</legend>
-                    <label>Color:
+                    </label>Color:<label>
                         <br />
                         <label>Black<input type="checkbox" name="color" value="black" /></label>
                         <label>Gray<input type="checkbox" name="color" value="gray" /></label>
@@ -54,13 +54,19 @@
                         <label>Yellow<input type="checkbox" name="color" value="yellow" /></label>
                         <label>Olive/Green<input type="checkbox" name="color" value="olive/green" /></label>
                         <label>Orange<input type="checkbox" name="color" value="orange" /></label>
-                    </label>
                     <label>Size:
                         <br />
                             <label>Small (Sparrow - Robin)<input id="small" type="radio" name="size" value="small" /></label>
                             <label>Medium (Crow - Duck)<input type="radio" name="size" value="medium" /></label>
                             <label>Large (Hawk - Owl)<input type="radio" name="size" value="large" /></label>
                             <label>Extra-Large (Heron - Eagle - Vulture)<input type="radio" name="size" value="extra-large" /></label>
+                    </label>
+                    <label>Habitat:
+                        <br />
+                            <label>Forest<input type="radio" name="habitat" value="forest" /></label>
+                            <label>Desert<input type="radio" name="habitat" value="desert" /></label>
+                            <label>In/Near Water<input type="radio" name="habitat" value="water" /></label>
+                            <label>Urban<input type="radio" name="habitat" value="urban" /></label>                            
                     </label>
                     <label>Behavior:
                         <br />
@@ -74,7 +80,7 @@
                     <label>Date<input type="date" name="date" /></label>
                     <label>Upload Picture<input type="file" name="picture" /></label>
                     <input type="submit" value="Upload" />
-                    <input type="submit" name ="filter-submit" value="Show Potential Birds" />
+                    <input id="list-button" type="button" name ="filter-submit" value="Show Potential Birds" />
                 </fieldset>
             </form>
 

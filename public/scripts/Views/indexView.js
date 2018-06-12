@@ -4,7 +4,7 @@ const indexView = {};
 
 indexView.initResults = function() {
     // BirdData.all.forEach(function(result) {
-    filterResults.forEach(function(result) {
-        $('#filter-results').append(result.toHtml());
-    });
+    // BirdData.all.forEach(function(result) {
+    //     $('#filter-results').append(result.toHtml());
+    // });
 }
