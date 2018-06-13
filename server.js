@@ -16,11 +16,27 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public') );
 
+loadDB();
+
 app.get('/', function(request, response){
     response.sendFile('./public/index.html');
 });
 
-loadDB();
+app.post('/sighting', function(request, response){
+  client.query(`
+      UPDATE sightings
+      SET species=$1, zip=$2, date=$3
+      `,
+      [
+        request.body.species,
+        request.body.zip,
+        request.body.date,
+      ]
+    )
+    .then(() => response.send('Update complete'))
+    .catch(err => console.log(err));
+  })
+
 
 app.listen(PORT, function() {
     console.log(`Listening on port: ${PORT}`);
@@ -48,6 +64,16 @@ function loadDB() {
       birdID VARCHAR(255) UNIQUE NOT NULL,
       "name" VARCHAR (255)
     );`
-  ).then(loadBirds)
-.catch(console.error);
+    ).then(loadBirds)
+    .catch(console.error);
+
+  client.query(`
+      CREATE TABLE IF NOT EXISTS
+      sightings (
+        species VARCHAR(255) NOT NULL,
+        zip INTEGER NOT NULL,
+        date VARCHAR(255) NOT NULL
+      );`
+    )
+    .catch(console.error);
 };

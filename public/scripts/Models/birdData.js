@@ -36,7 +36,7 @@ BirdData.fetchAll = function() {
             success: function(data) {
                 localStorage.setItem("birdData", JSON.stringify(data));
                 BirdData.loadAll(data);
-                indexView.initResults();
+                indexView.initIndexPage();
             },
             error: function() {
                 console.log('error');
@@ -45,11 +45,11 @@ BirdData.fetchAll = function() {
     };
 };
 
-BirdData.buildBirdList = function() {
-    const listButton = document.getElementById("list-button");
-    
-    listButton.addEventListener("click", BirdData.showBirdList);
-}
+// BirdData.buildBirdList = function() {
+//     const listButton = document.getElementById("list-button");
+//
+//     listButton.addEventListener("click", BirdData.showBirdList);
+// }
 
 BirdData.showBirdList = function() {
     const form = document.getElementById('filter');
@@ -57,7 +57,7 @@ BirdData.showBirdList = function() {
     const birdColor = form.color.value;
     const birdBehavior = form.behavior.value;
     const birdHabitat = form.habitat.value;
-    
+
     const filteredBirds = BirdData.all
         .filter(data => data.size === birdSize || data.size.includes(birdSize) || birdSize == '')
         .filter(data => data.color === birdColor || data.color.includes(birdColor) || birdColor == '')
@@ -65,11 +65,11 @@ BirdData.showBirdList = function() {
         .filter(data => data.habitat === birdHabitat || data.habitat.includes(birdHabitat) || birdHabitat == '')
 
     console.log(filteredBirds);
-    
+
     $('#filter-results').empty();
     filteredBirds.forEach(function(result) {
         $('#filter-results').append(result.toHtml());
     });
 }
-
-BirdData.buildBirdList();
+//
+// BirdData.buildBirdList();

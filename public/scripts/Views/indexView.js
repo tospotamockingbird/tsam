@@ -2,9 +2,18 @@
 
 const indexView = {};
 
-indexView.initResults = function() {
-    // BirdData.all.forEach(function(result) {
-    // BirdData.all.forEach(function(result) {
-    //     $('#filter-results').append(result.toHtml());
-    // });
+indexView.initIndexPage = function() {
+  $('#add-sighting').on('click', newSighting.submit);
 }
+
+const newSighting = {};
+
+newSighting.submit = function(event) {
+    event.preventDefault();
+    let sighting = new userSighting({
+      species: $('#species').val(),
+      zip: $('#zip').val(),
+      date: $('#date').val(),
+    });
+    sighting.insertSighting();
+};
