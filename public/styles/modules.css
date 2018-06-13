@@ -1,0 +1,32 @@
+@media screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 20px;
+    text-shadow: 1px 1px rgba(75,175,145,1);
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  li a {
+    font-size: 20px;
+  }
+
+  legend, label {
+    font-size: 20px;
+  }
+
+  .identifiers {
+    display: inline;
+  }
+
+  #filterBird {
+    min-width: 75%;
+  }
+
+}

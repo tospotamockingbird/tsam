@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Abel|Cabin|Nanum+Gothic" rel="stylesheet">
-
         <script id="filter-results-template" type="text/x-handlebars-template">
             <p>{{name}}</p>
             <img src="{{image.[0]}}"></img>
@@ -28,6 +27,7 @@
         <main>
             <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
             <br/>
+            <div id="container">
             <form>
                 <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
@@ -44,41 +44,52 @@
             <form id="filter">
                 <fieldset id="filterBird">
                     <legend>Filter Potential Birds</legend>
-                    </label>Color:<label>
+                    <label class="identifiers">Color:
                         <br />
                         <label><input type="checkbox" name="color" value="black" />Black</label>
                         <label><input type="checkbox" name="color" value="gray" />Gray</label>
                         <label><input type="checkbox" name="color" value="white" />White</label>
-                        <label><input type="checkbox" name="color" value="buff/brown" />Buff/Brown</label> <br/>
+                        <label><input type="checkbox" name="color" value="buff/brown" />Buff/Brown</label>
                         <label><input type="checkbox" name="color" value="red" />Red</label>
                         <label><input type="checkbox" name="color" value="yellow" />Yellow</label>
                         <label><input type="checkbox" name="color" value="olive/green" />Olive/Green</label>
-                        <label><input type="checkbox" name="color" value="orange" />Orange</label>
-                    </label> <br/>
-                    <label>Size:
+                        <label><input type="checkbox" name="color" value="orange" />Orange</label> <br/>
+                      </label>
+                    <label class="identifiers">
+                      Size:
                         <br />
                             <label><input id="small" type="radio" name="size" value="small" />Small (Sparrow - Robin)</label>
                             <label><input type="radio" name="size" value="medium" />Medium (Crow - Duck)</label>
                             <label><input type="radio" name="size" value="large" />Large (Hawk - Owl)</label>
                             <label><input type="radio" name="size" value="extra-large" />Extra-Large (Heron - Eagle - Vulture)</label>
                     </label> <br/>
-                    <label>Behavior:
+                    <label class="identifiers">
+                      Habitat:
+                        <br />
+                            <label><input type="radio" name="habitat" value="forest" />Forest</label>
+                            <label><input type="radio" name="habitat" value="desert" />Desert</label>
+                            <label><input type="radio" name="habitat" value="water" />In/Near Water</label>
+                            <label><input type="radio" name="habitat" value="urban" />Urban</label>
+                    </label> <br/>
+                    <label>
+                      Behavior:
                         <br />
                         <label><input type="radio" name="behavior" value="soaring" />Soaring</label>
                         <label><input type="radio" name="behavior" value="foraging" />Ground Foraging</label>
                         <label><input type="radio" name="behavior" value="in-tree" />In Tree/Bush</label>
                         <label><input type="radio" name="behavior" value="swimming" />Swimming/Wading</label>
-                        <label><input type="radio" name="behavior" value="no-behavior" />None of the Above</label>
-                    </label>
-                    <label>Location <input type="text" name="location" /></label> <br/>
-                    <label>Date <input type="date" name="date" /></label> <br/>
-                    <label>Upload Picture <input type="file" name="picture" /></label>
-                    <input type="submit" value="Upload" />
+                        <!-- <label><input type="radio" name="behavior" value="no-behavior" />None of the Above</label> -->
+                    </label><br/>
+                    <!-- <label>Location<input type="text" name="location" /></label>
+                    <label>Date<input type="date" name="date" /></label>
+                    <label>Upload Picture<input type="file" name="picture" /></label>
+                    <input type="submit" value="Upload" /> -->
                     <input id="list-button" type="button" name ="filter-submit" value="Show Potential Birds" />
                 </fieldset>
             </form>
-
-            <!-- Checkboxes will need to be added dynamically, but they're here now for structure -->
+          </div>
+          <br/><br/>
+            <div id="birdBox">
             <form>
                 <fieldset id="discoverBird">
                     <legend>Did You Spot One of These Birds?</legend>
@@ -89,9 +100,15 @@
                     <input type="submit" name="choose-submit" value="Add Bird"/> -->
                 </fieldset>
             </form>
+          </div>
         </main>
 
         <footer>&copy To Spot a Mockingbird | 2018</footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
