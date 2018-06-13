@@ -24,13 +24,13 @@ app.get('/', function(request, response){
 
 app.post('/sighting', function(request, response){
   client.query(`
-      UPDATE sightings
-      SET species=$1, zip=$2, date=$3
+      INSERT INTO sightings(species, zip, date)
+      SELECT $1, $2, $3
       `,
       [
         request.body.species,
         request.body.zip,
-        request.body.date,
+        request.body.date
       ]
     )
     .then(() => response.send('Update complete'))
@@ -72,7 +72,7 @@ function loadDB() {
       sightings (
         species VARCHAR(255) NOT NULL,
         zip INTEGER NOT NULL,
-        date VARCHAR(255) NOT NULL
+        date DATE NOT NULL
       );`
     )
     .catch(console.error);

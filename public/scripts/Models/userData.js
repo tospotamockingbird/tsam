@@ -9,14 +9,6 @@ function UserData (rawDataObj) {
 
 UserData.all = [];
 
-function userSighting(sightingObj) {
-  this.species = sightingObj.species;
-  this.zip = sightingObj.zip;
-  this.date = sightingObj.date;
-};
-
-userSighting.all = [];
-
 UserData.prototype.toHtml = function() {
     // const profileCountTemplate = Handlebars.compile($('#profile-count-template').text());
     const profileListTemplate = Handlebars.compile($('#profile-list-template').text());
@@ -49,6 +41,14 @@ if(localStorage.rawData){
         });
     };
 }
+
+function userSighting(sightingObj) {
+  this.species = sightingObj.species;
+  this.zip = sightingObj.zip;
+  this.date = sightingObj.date;
+};
+
+userSighting.all = [];
 
 userSighting.prototype.insertSighting = function(callback) {
     $.post('/sighting', {species: this.species, zip: this.zip, date: this.date})
