@@ -54,13 +54,15 @@ BirdData.buildBirdList = function() {
 BirdData.showBirdList = function() {
     const form = document.getElementById('filter');
     const birdSize = form.size.value;
-    const birdColor = form.color.value;
     const birdBehavior = form.behavior.value;
     const birdHabitat = form.habitat.value;
     
+    const birdColor = $('input[name="color"]:checked');
+    console.log(birdColor);
+    
     const filteredBirds = BirdData.all
         .filter(data => data.size === birdSize || data.size.includes(birdSize) || birdSize == '')
-        .filter(data => data.color === birdColor || data.color.includes(birdColor) || birdColor == '')
+        // .filter(data => data.color === birdColor || data.color.includes(birdColor) || birdColor == '')
         .filter(data => data.behavior === birdBehavior || data.behavior.includes(birdBehavior) || birdBehavior == '')
         .filter(data => data.habitat === birdHabitat || data.habitat.includes(birdHabitat) || birdHabitat == '')
 
