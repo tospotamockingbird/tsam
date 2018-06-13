@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Abel|Cabin|Nanum+Gothic" rel="stylesheet">
-
+        
         <script id="filter-results-template" type="text/x-handlebars-template">
             <p>{{name}}</p>
             <img src="{{image}}"></img>
@@ -28,11 +28,23 @@
         <main>
             <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
             <br/>
-            <form>
+            <form id="form1" runat="server">
                 <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
-                    <label>Species<input type="text" name="species" /></label> <br/>
+                    <label>Species<br/></label>
                     <!-- Should we use zip code?  Or something else? -->
+                    <select theme="google" placeholder="Select Your Favorite" data-search="true">
+                        <option value="AF">Afghanistan</option>
+                        <option value="AX">Åland Islands</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AQ">Antarctica</option>
+                        ...
+                      </select>
                     <label>Zip Code???<input type="text" name="zip" /></label> <br/>
                     <label>Date<input type="date" name="date" /></label> <br/>
                     <label>Upload Picture<input type="file" name="picture" /></label> <br/>
@@ -99,7 +111,7 @@
 
         <footer>&copy To Spot a Mockingbird | 2018</footer>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
         <script type="text/javascript" src="./scripts/models/birdData.js"></script>
         <script type="text/javascript" src="./scripts/models/userLiSuData.js"></script>
