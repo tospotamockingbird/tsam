@@ -24,13 +24,13 @@ BirdData.loadAll = function(rawBirdData) {
 };
 
 BirdData.fetchAll = function() {
-    if (localStorage.rawBirdData) {
-        const parsedBirdData = JSON.parse(localStorage.rawBirdData);
+    if (localStorage.birdData) {
+        const parsedBirdData = JSON.parse(localStorage.birdData);
         BirdData.loadAll(parsedBirdData);
         indexView.initResults();
     } else {
-        $.getJSON({
-            url: 'data/birdData.json',
+        $.ajax({
+            url: '../../data/birdData.json',
             data: 'data',
             success: function(data) {
                 localStorage.setItem("birdData", JSON.stringify(data));
