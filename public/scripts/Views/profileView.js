@@ -14,9 +14,9 @@ $(document).ready(function(){
       if($(this).is(":checked")){
             $(this).parents("tr").remove();
           }
-        });
       });
-    });  
+    });
+  });  
 
 
     
