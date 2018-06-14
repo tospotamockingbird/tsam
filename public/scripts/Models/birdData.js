@@ -14,7 +14,6 @@ function BirdData(birdDataObj) {
 
 BirdData.prototype.toHtml = function() {
    const resultsTemplate = Handlebars.compile($('#filter-results-template').text());
-
    return resultsTemplate(this);
 };
 
@@ -50,16 +49,32 @@ BirdData.fetchAll = function() {
 //     listButton.addEventListener("click", BirdData.showBirdList);
 // }
 
+BirdData.filterOnColor = function(data) {
+    return !Array.isArray(data.color);
+}
+
 BirdData.showBirdList = function() {
     const form = document.getElementById('filter');
     const birdSize = form.size.value;
-    const birdColor = form.color.value;
     const birdBehavior = form.behavior.value;
     const birdHabitat = form.habitat.value;
+  
+    const birdColors = $('input[name="color"]:checked');
+    const selectedColors = birdColors.map(function() {
+        return this.value;
+    }).get();
+
+    console.log(selectedColors);
 
     const filteredBirds = BirdData.all
         .filter(data => data.size === birdSize || data.size.includes(birdSize) || birdSize == '')
-        .filter(data => data.color === birdColor || data.color.includes(birdColor) || birdColor == '')
+        .filter(data => {
+            if (Array.isArray(data.color)) {
+                return data.color.reduce((colorFound, color) => selectedColors.includes(color) || colorFound, false);
+            } else {
+                return selectedColors.includes(data.color);
+            }
+        })
         .filter(data => data.behavior === birdBehavior || data.behavior.includes(birdBehavior) || birdBehavior == '')
         .filter(data => data.habitat === birdHabitat || data.habitat.includes(birdHabitat) || birdHabitat == '')
 

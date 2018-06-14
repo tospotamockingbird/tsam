@@ -3,6 +3,11 @@ const indexView = {};
 
 indexView.initIndexPage = function() {
   $('#add-sighting').on('click', newSighting.submit);
+
+indexView.initResults = function() {
+    // BirdData.all.forEach(function(result) {
+    //     $('#species-selector').append(result.text());
+    // });
 }
 
 const newSighting = {};
