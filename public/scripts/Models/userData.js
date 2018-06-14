@@ -48,8 +48,6 @@ function userSighting(sightingObj) {
   this.date = sightingObj.date;
 };
 
-userSighting.all = [];
-
 userSighting.prototype.insertSighting = function(callback) {
     $.post('/sighting', {species: this.species, zip: this.zip, date: this.date})
     .done(data => console.log(data))

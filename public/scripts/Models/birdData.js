@@ -36,7 +36,6 @@ BirdData.fetchAll = function() {
             success: function(data) {
                 localStorage.setItem("birdData", JSON.stringify(data));
                 BirdData.loadAll(data);
-                indexView.initIndexPage();
             },
             error: function() {
                 console.log('error');
@@ -71,5 +70,5 @@ BirdData.showBirdList = function() {
         $('#filter-results').append(result.toHtml());
     });
 }
-//
+
 // BirdData.buildBirdList();

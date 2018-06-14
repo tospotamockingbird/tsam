@@ -1,5 +1,4 @@
 'use strict';
-
 const indexView = {};
 
 indexView.initIndexPage = function() {
