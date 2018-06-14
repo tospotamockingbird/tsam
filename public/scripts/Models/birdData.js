@@ -14,7 +14,6 @@ function BirdData(birdDataObj) {
 
 BirdData.prototype.toHtml = function() {
    const resultsTemplate = Handlebars.compile($('#filter-results-template').text());
-
    return resultsTemplate(this);
 };
 
