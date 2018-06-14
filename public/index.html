@@ -19,7 +19,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="hotspots.html">Hotspots</a></li>
                     <li><a href="profile.html">Profile</a></li>
-                    <li><a href="login-signup.html">Login/Signup</a></li>
+                    <li><a href="" id="nuh-uh" onclick="notSoFast()">Login/Signup</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,19 +31,17 @@
             <form>
                 <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
-                    <label>Species<input type="text" name="species" /></label> <br/>
+                    <label>Species <input type="text" name="species" /></label> <br/>
                     <!-- Should we use zip code?  Or something else? -->
-                    <label>Zip Code???<input type="text" name="zip" /></label> <br/>
-                    <label>Date<input type="date" name="date" /></label> <br/>
-                    <label>Upload Picture<input type="file" name="picture" /></label> <br/>
-                    <input type="submit" value="Upload" /> <br/>
+                    <label>Zip Code <input type="text" name="zip" /></label> <br/>
+                    <label>Date <input type="date" name="date" /></label> <br/><br/>
                     <input type="submit" name ="add-submit" value="Add Known Bird" />
                 </fieldset>
             </form>
 
             <form id="filter">
-                <fieldset id="filterBird">
-                    <legend>Filter Potential Birds</legend>
+                <fieldset id="filterBox">
+                    <legend id="filterBird">Filter Potential Birds</legend>
                     <label class="identifiers">Color:
                         <br />
                         <label><input type="checkbox" name="color" value="black" />Black</label>
@@ -58,7 +56,7 @@
                     <label class="identifiers">
                       Size:
                         <br />
-                            <label><input id="small" type="radio" name="size" value="small" />Small (Sparrow - Robin)</label>
+                            <label><input type="radio" name="size" value="small" />Small (Sparrow - Robin)</label>
                             <label><input type="radio" name="size" value="medium" />Medium (Crow - Duck)</label>
                             <label><input type="radio" name="size" value="large" />Large (Hawk - Owl)</label>
                             <label><input type="radio" name="size" value="extra-large" />Extra-Large (Heron - Eagle - Vulture)</label>
@@ -78,12 +76,7 @@
                         <label><input type="radio" name="behavior" value="foraging" />Ground Foraging</label>
                         <label><input type="radio" name="behavior" value="in-tree" />In Tree/Bush</label>
                         <label><input type="radio" name="behavior" value="swimming" />Swimming/Wading</label>
-                        <!-- <label><input type="radio" name="behavior" value="no-behavior" />None of the Above</label> -->
                     </label><br/>
-                    <!-- <label>Location<input type="text" name="location" /></label>
-                    <label>Date<input type="date" name="date" /></label>
-                    <label>Upload Picture<input type="file" name="picture" /></label>
-                    <input type="submit" value="Upload" /> -->
                     <input id="list-button" type="button" name ="filter-submit" value="Show Potential Birds" />
                 </fieldset>
             </form>

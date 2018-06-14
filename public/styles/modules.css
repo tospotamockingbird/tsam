@@ -1,5 +1,9 @@
 @media screen and (max-width: 600px) {
 
+  html {
+    width: 100%;
+  }
+
   h1 {
     font-size: 35px;
   }
@@ -25,8 +29,24 @@
     display: inline;
   }
 
+  input[type=submit], #list-button {
+    padding: 10px 15px;
+  }
+
   #filterBird {
-    min-width: 75%;
+    position: -webkit-sticky;
+    position: sticky;
+    /* overflow-x: none; */
+  }
+
+  #filterBox {
+    max-width: 75%;
+    overflow: auto;
+    margin-right: 2px;
+  }
+
+  #birdBox {
+    text-align: center;
   }
 
 }
