@@ -4,8 +4,6 @@ const indexView = {};
 
 indexView.initResults = function() {
     // BirdData.all.forEach(function(result) {
-    // BirdData.all.forEach(function(result) {
-    //     $('#filter-results').append(result.toHtml());
+    //     $('#species-selector').append(result.text());
     // });
-    
 }
