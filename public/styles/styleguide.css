@@ -19,7 +19,7 @@ main {
 
 #container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   min-width: 75%;
 }
 
@@ -87,7 +87,7 @@ p {
   padding-left: 15%;
   padding-right: 15%;
   font-family: 'Cabin', sans-serif;
-  font-size: 25px;
+  font-size: 45px;
   color: rgba(225,233,231,1);
 }
 
@@ -95,22 +95,26 @@ img {
   max-width: 300px;
 }
 
-#filterBox, #knownBird {
+#filter, #knownBird {
   height: 350px;
   margin-left: 8%;
   margin-right: 8%;
 }
 
 #knownBird {
-  min-width: 15%;
+  min-width: 150px;
 }
 
-#filterBox {
-  min-width: 70%;
+#filter {
+  min-width: 60%;
 }
 
 #birdBox {
-  justify-content: center;
+  margin-left: 40%;
+}
+
+#discoverBird {
+
 }
 
 input[type=text]:focus {

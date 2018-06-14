@@ -28,8 +28,8 @@
             <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
             <br/>
             <div id="container">
-            <form>
-                <fieldset id="knownBird">
+            <form id="knownBird">
+                <fieldset>
                     <legend>Add Known Bird</legend>
                     <label>Species <input type="text" name="species" /></label> <br/>
                     <!-- Should we use zip code?  Or something else? -->
@@ -40,7 +40,7 @@
             </form>
 
             <form id="filter">
-                <fieldset id="filterBox">
+                <fieldset>
                     <legend id="filterBird">Filter Potential Birds</legend>
                     <label class="identifiers">Color:
                         <br />
@@ -83,25 +83,16 @@
           </div>
           <br/><br/>
             <div id="birdBox">
-            <form>
-                <fieldset id="discoverBird">
+            <form id="discoverBird">
+                <fieldset>
                     <legend>Did You Spot One of These Birds?</legend>
                     <div id="filter-results"></div>
-                    <!-- <label>Crow<input type="radio" name="bird" value="Crow" /></label>
-                    <label>Finch<input type="radio" name="bird" value="Finch" /></label>
-                    <label>Ostrich<input type="radio" name="bird" value="Ostrich" /></label>
-                    <input type="submit" name="choose-submit" value="Add Bird"/> -->
                 </fieldset>
             </form>
           </div>
         </main>
 
         <footer>&copy To Spot a Mockingbird | 2018</footer>
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>

@@ -2,6 +2,7 @@
 
   html {
     width: 100%;
+    display: flex;
   }
 
   h1 {
@@ -25,27 +26,28 @@
     font-size: 20px;
   }
 
-  .identifiers {
-    display: inline;
-  }
-
   input[type=submit], #list-button {
     padding: 10px 15px;
+  }
+
+  form {
+    justify-content: center;
   }
 
   #filterBird {
     position: -webkit-sticky;
     position: sticky;
-    /* overflow-x: none; */
+    overflow-x: none;
   }
 
-  #filterBox {
+  #filter {
     max-width: 75%;
     overflow: auto;
     margin-right: 2px;
   }
 
   #birdBox {
+    float: left;
     text-align: center;
   }
 
