@@ -27,7 +27,6 @@
                "/public/images/junco2.jpg",
                "/public/images/junco3.jpg",
                "/public/images/junco4.png" ]
-
   },
 
   {
@@ -465,7 +464,7 @@
     "color": "black",
     "size": "medium",
     "behavior": [ "soaring",
-                  "foraging", 
+                  "foraging",
                   "in-tree" ],
     "image": [ "/public/images/acrow1.jpg",
                "/public/images/acrow2.jpg" ]

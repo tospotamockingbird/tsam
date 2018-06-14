@@ -31,9 +31,16 @@
         <main>
             <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
             <br/>
-            <form>
+            <form id="sighting" action="/sighting" method="post">
                 <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
+                    <label>Species<input id="species" type="text" name="species" /></label> <br/>
+                    <!-- Should we use zip code?  Or something else? -->
+                    <label>Zip Code<input id="zip" type="text" name="zip" /></label> <br/>
+                    <label>Date<input id="date" type="date" name="date" /></label> <br/>
+                    <!-- <label>Upload Picture<input type="file" name="picture" /></label> <br/>
+                    <input type="submit" value="Upload" /> <br/> -->
+                    <input type="button" id="add-sighting" name ="add-submit" value="Add Known Bird" />
                     <label>Species</label>
                     <select id="species-selector">
                             <option value="">Select Bird</option>
@@ -88,12 +95,6 @@
                             <option value="049">White Ibis</option>
                             <option value="050">Brandt's Cormorant</option>
                     </select><br/>
-
-                    <label>Zip Code???<input type="text" name="zip"/></label> <br/>
-                    <label>Date<input type="date" name="date" /></label> <br/>
-                    <label>Upload Picture<input type="file" name="picture" /></label> <br/>
-                    <input type="submit" value="Upload" /> <br/>
-                    <input type="submit" name ="add-submit" value="Add Known Bird" />
                 </fieldset>
             </form>
 
@@ -122,7 +123,7 @@
                             <label>Forest<input type="radio" name="habitat" value="forest" /></label>
                             <label>Desert<input type="radio" name="habitat" value="desert" /></label>
                             <label>In/Near Water<input type="radio" name="habitat" value="water" /></label>
-                            <label>Urban<input type="radio" name="habitat" value="urban" /></label>                            
+                            <label>Urban<input type="radio" name="habitat" value="urban" /></label>
                     </label>
                     <label>Behavior:
                         <br />
@@ -132,11 +133,6 @@
                         <label>Swimming/Wading<input type="radio" name="behavior" value="swimming" /></label>
                         <label>None of the Above<input type="radio" name="behavior" value="no-behavior" /></label>
                     </label>
-                    <label>Location<input type="text" name="location" /></label>
-                    <label>Date<input type="date" name="date" /></label>
-                    <label>Upload Picture<input type="file" name="picture" /></label>
-                    <input type="submit" value="Upload" />
-                    <input id="list-button" type="button" name ="filter-submit" value="Show Potential Birds" />
                 </fieldset>
             </form>
 
@@ -153,7 +149,7 @@
             </form>
         </main>
 
-        <footer>&copy To Spot a Mockingbird | 2018</footer>
+        <!-- <footer>&copy To Spot a Mockingbird | 2018</footer> -->
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
@@ -170,7 +166,7 @@
         <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
         <script>
             BirdData.fetchAll();
-            
+            indexView.initIndexPage();
         </script>
     </body>
 </html>
