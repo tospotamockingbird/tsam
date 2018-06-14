@@ -42,14 +42,27 @@ if(localStorage.rawData){
     };
 }
 
+// UserData.fetchAll = callback => {
+//         $.get('/profile')
+//         .then(
+//           results => {
+//             UserData.loadAll(results);
+//             callback();
+//           }
+//         )
+//     };
+
 function userSighting(sightingObj) {
+  this.spotter = sightingObj.spotter;
+  this.birdID = sightingObj.birdID;
   this.species = sightingObj.species;
   this.zip = sightingObj.zip;
   this.date = sightingObj.date;
 };
 
-userSighting.prototype.insertSighting = function(callback) {
-    $.post('/sighting', {species: this.species, zip: this.zip, date: this.date})
+
+userSighting.prototype.insertSighting = function() {
+    $.post('/sighting', {spotter: this.spotter, birdID: this.birdID, species: this.species, zip: this.zip, date: this.date})
     .done(data => console.log(data))
     .fail(err => console.log(err));
 };

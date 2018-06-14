@@ -24,10 +24,12 @@ app.get('/', function(request, response){
 
 app.post('/sighting', function(request, response){
   client.query(`
-      INSERT INTO sightings(species, zip, date)
-      SELECT $1, $2, $3
+      INSERT INTO sightings(spotter, birdID, species, zip, date)
+      SELECT $1, $2, $3, $4, $5
       `,
       [
+        request.body.spotter,
+        request.body.birdID,
         request.body.species,
         request.body.zip,
         request.body.date
@@ -70,6 +72,9 @@ function loadDB() {
   client.query(`
       CREATE TABLE IF NOT EXISTS
       sightings (
+        id SERIAL,
+        spotter VARCHAR(255) NOT NULL,
+        birdID VARCHAR(255) NOT NULL,
         species VARCHAR(255) NOT NULL,
         zip INTEGER NOT NULL,
         date DATE NOT NULL

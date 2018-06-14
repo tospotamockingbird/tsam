@@ -10,9 +10,11 @@ const newSighting = {};
 newSighting.submit = function(event) {
     event.preventDefault();
     let sighting = new userSighting({
-      species: $('#species').val(),
+      spotter: $('#spotter').val().toUpperCase(),
+      birdID: $('#species-selector option:selected').val(),
+      species: $('#species-selector option:selected').text(),
       zip: $('#zip').val(),
-      date: $('#date').val(),
+      date: $('#date').val()
     });
     sighting.insertSighting();
 };

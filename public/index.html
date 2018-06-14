@@ -31,12 +31,63 @@
             <form id="sighting" action="/sighting" method="post">
                 <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
-                    <label>Species<input id="species" type="text" name="species" /></label> <br/>
-                    <!-- Should we use zip code?  Or something else? -->
+                    <label>Who spotted the bird?<input id="spotter" type="text" name="spotter" /></label> <br/>
+                    <label>Species</label>
+                    <select id="species-selector">
+                            <option value="">Select Bird</option>
+                            <option value="001">American Robin</option>
+                            <option value="002">Dark-Eyed Junco</option>
+                            <option value="003">House Finch</option>
+                            <option value="004">Northern Flicker</option>
+                            <option value="005">Scrub Jay</option>
+                            <option value="006">Mallard</option>
+                            <option value="007">Greater Sage-Grouse</option>
+                            <option value="008">Wild Turkey</option>
+                            <option value="009">Rock Pigeon</option>
+                            <option value="010">Canada Goose</option>
+                            <option value="011">Cackling Goose</option>
+                            <option value="012">Osprey</option>
+                            <option value="013">Bald Eagle</option>
+                            <option value="014">Turkey Vulture</option>
+                            <option value="015">Barn Swallow</option>
+                            <option value="016">Chimney Swift</option>
+                            <option value="017">Killdeer</option>
+                            <option value="018">Great Blue Heron</option>
+                            <option value="019">Cattle Egret</option>
+                            <option value="020">Red-Tailed Hawk</option>
+                            <option value="021">Barred Owl</option>
+                            <option value="022">Western Screech Owl</option>
+                            <option value="023">Belted Kingfisher</option>
+                            <option value="024">Hairy Woodpecker</option>
+                            <option value="025">Downy Woodpecker</option>
+                            <option value="026">Least Flycatcher</option>
+                            <option value="027">Yellow Throated Vireo</option>
+                            <option value="028">Loggerhead Shrike</option>
+                            <option value="029">Stellar's Jay</option>
+                            <option value="030">Black-Billed Magpie</option>
+                            <option value="031">Common Raven</option>
+                            <option value="032">American Crow</option>
+                            <option value="033">Mountain Chickadee</option>
+                            <option value="034">Western Bluebird</option>
+                            <option value="035">Northern Mockingbird</option>
+                            <option value="036">European Starling</option>
+                            <option value="037">Gray Catbird</option>
+                            <option value="038">Cedar Waxwing</option>
+                            <option value="039">Yellow Rumped Warbler</option>
+                            <option value="040">Pine Siskin</option>
+                            <option value="041">Rose-Breasted Grosbeak</option>
+                            <option value="042">Dickcissel</option>
+                            <option value="043">Scarlet Tanager</option>
+                            <option value="044">Brewer's Blackbird</option>
+                            <option value="045">Western Meadowlark</option>
+                            <option value="046">Cliff Swallow</option>
+                            <option value="047">American Kestrel</option>
+                            <option value="048">Trumpeter Swan</option>
+                            <option value="049">White Ibis</option>
+                            <option value="050">Brandt's Cormorant</option>
+                    </select><br/>
                     <label>Zip Code<input id="zip" type="text" name="zip" /></label> <br/>
                     <label>Date<input id="date" type="date" name="date" /></label> <br/>
-                    <!-- <label>Upload Picture<input type="file" name="picture" /></label> <br/>
-                    <input type="submit" value="Upload" /> <br/> -->
                     <input type="button" id="add-sighting" name ="add-submit" value="Add Known Bird" />
                 </fieldset>
             </form>
