@@ -109,8 +109,8 @@ img {
   min-width: 60%;
 }
 
-#birdBox {
-  margin-left: 40%;
+section {
+  align-content: center;
 }
 
 #discoverBird {
@@ -148,7 +148,6 @@ footer {
   text-align: center;
   color: rgba(225,233,231,1);
   width: 100%;
-  /* height: 50px; */
 }
 
 /* Following code manipulates the appearance of the profile list table. It's meant to be a table that lists each bird spotted*/
@@ -171,6 +170,7 @@ table {
 td img {
   width: 5em;
 }
+
 /* rgba(115,97,83) --> grey/brown */
 /* rgba(142,114,97,0.5) --> lighter grey/brown */
 /* rgba(16,105,90) --> green/blue */
