@@ -18,5 +18,21 @@ $(document).ready(function(){
     });
   });  
 
-
+  $(document).ready(function () {
+  var tmp = [];
+  
+  $("input[id='bird-checkbox']").change(function() {
+  var checked = $(this).val();
+    if ($(this).is(':checked')) {
+      tmp.push(checked);
+    }else{
+    tmp.splice($.inArray(checked, tmp),1);
+    }
+  });
+ 
+  $('#button').on('click', function () {
+		alert(tmp);
+  });
+  
+});
     

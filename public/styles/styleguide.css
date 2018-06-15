@@ -118,12 +118,14 @@ table {
   margin-left:auto; 
   margin-right:auto;
   table-layout: fixed;
-  width: 60%;
   border: solid black 1px;
+  width: 60%;
 }
-#profile-list thead{
-  background-color: brown;
+
+.hide-border {
+  border: none;
 }
+
 #profile-list h2{
   margin-left:auto; 
   margin-right:auto;
