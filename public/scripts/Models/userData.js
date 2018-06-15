@@ -59,7 +59,7 @@ function spotterRequest(spotterObj) {
 spotterRequest.prototype.requestSpotter = function() {
     console.log('requesting spotters sightings', this.spotter)
     $.get('/profile', {spotter: this.spotter})
-    .done(data => UserData.loadAll(data))
+    .done(data => console.log(data))
     .fail(err => console.log(err));
 };
 
