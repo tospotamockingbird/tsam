@@ -27,6 +27,7 @@
                "/public/images/junco2.jpg",
                "/public/images/junco3.jpg",
                "/public/images/junco4.png" ]
+
   },
 
   {
@@ -55,8 +56,6 @@
     "behavior": [ "foraging",
                   "soaring",
                   "in-tree" ],
-    "image": [ "./images/flicker1.jpg",
-               "./images/flicker2.jpg" ],
     "image": [ "/public/images/flicker1.jpg",
                "/public/images/flicker2.jpg" ]
   },
