@@ -76,3 +76,13 @@ userSighting.prototype.insertSighting = function() {
     .done(data => console.log(data))
     .fail(err => console.log(err));
 };
+
+// function deleterRequest(deleterObj) {
+//   // this will be the creation of this.checkbox values
+// }
+//
+// userSighting.prototype.insertSighting = function() {
+//     $.get('/delete', {delete request : stuff from above})
+//     .done(data => console.log(data))
+//     .fail(err => console.log(err));
+// };

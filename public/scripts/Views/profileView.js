@@ -17,3 +17,12 @@ newSpotter.submit = function(event) {
     });
   spotter.requestSpotter();
 };
+
+// const newDeleter = {};
+//
+// deleters.submit = function(event) {
+//   let deleters = new deleterRequest({
+//     spotter: $('#spotter-input').val().toUpperCase() this will be all values of checked boxes
+//     });
+//   spotter.requestSpotter();
+// };

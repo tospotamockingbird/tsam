@@ -29,7 +29,6 @@ app.get('/profile', function( request, response ) {
     SELECT * FROM sightings
     where spotter=$1;
     `,
-    // need to figure out how to match request spotter to query spotter above in empty quote string
       [request.query.spotter]
   )
   .then(result => response.send(result.rows))
@@ -53,6 +52,16 @@ app.post('/sighting', function(request, response){
     .catch(err => console.log(err));
   })
 
+//need to get delete from picklist checkboxes on profile page
+// app.delete('/delete', (request, response) => {
+//     client.query(
+//       `DELETE FROM sightings
+//       WHERE id= ANY('$1'::int[]);`,
+//       [request.query.deleters]
+//     )
+//     .then(() => response.send('Delete complete'))
+//     .catch(console.error);
+//   });
 
 app.listen(PORT, function() {
     console.log(`Listening on port: ${PORT}`);
