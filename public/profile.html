@@ -39,12 +39,16 @@
     </header>
     <main>
         <section id="profile-count">
-
         </section>
+
+        <form id="spotter" action="/profile" method="get">
         <section id="profile-list">
-                <h2>Birds Spotted</h2>
-
+          <label>Enter user name to see their bird sightings<input id="spotter-input" type="text" name="spotter-input"/></label>
+          <input type="button" id="get-spotter" name="get-spotter" value="Get user sightings"/>
+        </form>
+          <h2>Birds Spotted</h2>
         </section>
+
     </main>
     <footer>
         &copy To Spot a Mockingbird | 2018
@@ -63,7 +67,8 @@
     <script type="text/javascript" src="./scripts/controllers/profileController.js"></script>
     <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
     <script>
-        UserData.fetchAll();
+        // UserData.fetchAll();
+        profileView.initIndexPage();
     </script>
 </body>
 </html>

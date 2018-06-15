@@ -22,6 +22,20 @@ app.get('/', function(request, response){
     response.sendFile('./public/index.html');
 });
 
+// beginning of get request for all sightings made by one spotter. spotter input field is on profile page
+app.get('/profile', function( request, response ) {
+  console.log('getting profile', request);
+  client.query(`
+    SELECT * FROM sightings
+    where spotter=$1;
+    `,
+    // need to figure out how to match request spotter to query spotter above in empty quote string
+      [request.query.spotter]
+  )
+  .then(result => response.send(result.rows))
+  .catch(console.error);
+});
+
 app.post('/sighting', function(request, response){
   client.query(`
       INSERT INTO sightings(spotter, birdID, species, zip, date)

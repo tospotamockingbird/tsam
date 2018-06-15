@@ -23,27 +23,27 @@ UserData.loadAll = function(rawData) {
     })
   };
 
-UserData.fetchAll = function() {
-if(localStorage.rawData){
-    var parsed = JSON.parse(localStorage.rawData);
-    UserData.loadAll(parsed);
-    profileView.initIndexPage();
-} else {
-    $.ajax({
-    dataType: 'json',
-    url: 'data/userData.json',
-    data: 'data',
-    success: function(data) {
-    localStorage.setItem("rawData", JSON.stringify(data));
-    UserData.loadAll(data);
-    profileView.initIndexPage();
-            }
-        });
-    };
-}
+// UserData.fetchAll = function() {
+// if(localStorage.rawData){
+//     var parsed = JSON.parse(localStorage.rawData);
+//     UserData.loadAll(parsed);
+//     profileView.initIndexPage();
+// } else {
+//     $.ajax({
+//     dataType: 'json',
+//     url: 'data/userData.json',
+//     data: 'data',
+//     success: function(data) {
+//     localStorage.setItem("rawData", JSON.stringify(data));
+//     UserData.loadAll(data);
+//     profileView.initIndexPage();
+//             }
+//         });
+//     };
+// }
 
 // UserData.fetchAll = callback => {
-//         $.get('/profile')
+//         $.get('/profile'), {spotter: this.spotter}
 //         .then(
 //           results => {
 //             UserData.loadAll(results);
@@ -52,6 +52,17 @@ if(localStorage.rawData){
 //         )
 //     };
 
+function spotterRequest(spotterObj) {
+  this.spotter = spotterObj.spotter;
+}
+
+spotterRequest.prototype.requestSpotter = function() {
+    console.log('requesting spotters sightings', this.spotter)
+    $.get('/profile', {spotter: this.spotter})
+    .done(data => UserData.loadAll(data))
+    .fail(err => console.log(err));
+};
+
 function userSighting(sightingObj) {
   this.spotter = sightingObj.spotter;
   this.birdID = sightingObj.birdID;
@@ -59,7 +70,6 @@ function userSighting(sightingObj) {
   this.zip = sightingObj.zip;
   this.date = sightingObj.date;
 };
-
 
 userSighting.prototype.insertSighting = function() {
     $.post('/sighting', {spotter: this.spotter, birdID: this.birdID, species: this.species, zip: this.zip, date: this.date})
