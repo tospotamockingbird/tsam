@@ -102,7 +102,6 @@ button {
   border: 5px dotted rgba(75,175,145,1);
 }
 
-
 footer {
   position: absolute;
   bottom: 0;
@@ -113,14 +112,18 @@ footer {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-/* Follwoing code manipulates the appearance of the profile list table. It's meant to be a table that lists each bird spotted*/
+/* Following code manipulates the appearance of the profile list table. It's meant to be a table that lists each bird spotted*/
 
 table {
   margin-left:auto; 
   margin-right:auto;
   table-layout: fixed;
-  width: 60%;
   border: solid black 1px;
+  width: 60%;
+}
+
+.hide-border {
+  border: none;
 }
 
 #profile-list h2{
