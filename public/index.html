@@ -10,7 +10,6 @@
             <p>{{name}}</p>
             <img src="{{image.[0]}}"></img>
         </script>
-        
     </head>
 
     <body>
@@ -30,9 +29,10 @@
             <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
             <br/>
             <div id="container">
-            <form id="knownBird">
-                <fieldset>
+            <form id="sighting" action="/sighting" method="post">
+              <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
+                    <label>Who spotted the bird?<input id="spotter" type="text" name="spotter" /></label> <br/>
                     <label>Species </label>
                     <select id="species-selector">
                             <option value="">Select Bird</option>
@@ -90,7 +90,7 @@
 
                     <label>Zip Code <input type="text" name="zip"/></label> <br/>
                     <label>Date <input type="date" name="date" /></label> <br/>
-                    <input type="submit" name ="add-submit" value="Add Known Bird" />
+                    <input type="button" id="add-sighting" name ="add-submit" value="Add Known Bird" />
                 </fieldset>
             </form>
 
@@ -164,7 +164,7 @@
         <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
         <script>
             BirdData.fetchAll();
-
+            indexView.initIndexPage();
         </script>
     </body>
 </html>
