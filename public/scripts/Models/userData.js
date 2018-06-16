@@ -5,7 +5,7 @@ function UserData (rawDataObj) {
     this.imageURL = rawDataObj.imageURL;
     this.date = rawDataObj.date;
     this.location = rawDataObj.location;
- };
+};
 
 UserData.all = [];
 
@@ -18,7 +18,7 @@ UserData.loadAll = function(rawData) {
     rawData.forEach(function(userObject) {
     UserData.all.push(new UserData(userObject));
     })
-  };
+};
 
 UserData.fetchAll = function() {
 if(localStorage.rawData){
