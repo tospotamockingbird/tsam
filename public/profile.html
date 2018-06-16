@@ -7,7 +7,7 @@
 
     <script id="profile-list-template" type="text/x-handlebars-template">
         <table>
-            <tbody>   
+            <tbody>
                 <tr>
                     <td><p>{{name}}</p></td>
                     <td><img src="{{imageURL}}"></td>
@@ -33,6 +33,12 @@
         </nav>
     </header>
     <main>
+      <form id="spotter" action="/profile" method="get">
+      <section id="profile-list">
+        <label>Enter user name to see their bird sightings<input id="spotter-input" type="text" name="spotter-input"/></label>
+        <input type="button" id="get-spotter" name="get-spotter" value="Get user sightings"/>
+      </form>
+
         <section id="profile-list">
             <h2>Birds Spotted</h2>
             <td><p>name</p></td>
@@ -40,8 +46,8 @@
             <td><p>date</p></td>
             <td><p>location</p></td>
             <td><input type='checkbox' value= "1" id='bird-checkbox'></td>
-
         </section>
+
         <section id="bird-delete">
             <button id="button" type="button">button</button>
             <button type="button" class="delete-row">Delete Row</button>
@@ -66,7 +72,7 @@
     <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
     <script>
         UserData.fetchAll();
+        profileView.initIndexPage();
     </script>
-
 </body>
 </html>
