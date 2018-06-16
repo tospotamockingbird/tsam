@@ -20,35 +20,6 @@ UserData.loadAll = function(rawData) {
     })
 };
 
-// UserData.fetchAll = function() {
-// if(localStorage.rawData){
-//     var parsed = JSON.parse(localStorage.rawData);
-//     UserData.loadAll(parsed);
-//     profileView.initIndexPage();
-// } else {
-//     $.ajax({
-//     dataType: 'json',
-//     url: 'data/userData.json',
-//     data: 'data',
-//     success: function(data) {
-//     localStorage.setItem("rawData", JSON.stringify(data));
-//     UserData.loadAll(data);
-//     profileView.initIndexPage();
-//             }
-//         });
-//     };
-// }
-//
-// UserData.fetchAll = callback => {
-//         $.get('/profile'), {spotter: this.spotter}
-//         .then(
-//           results => {
-//             UserData.loadAll(results);
-//             callback();
-//           }
-//         )
-//     };
-
 function spotterRequest(spotterObj) {
   this.spotter = spotterObj.spotter;
 }
