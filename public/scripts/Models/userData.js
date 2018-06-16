@@ -38,16 +38,16 @@ UserData.loadAll = function(rawData) {
 //         });
 //     };
 // }
-
-UserData.fetchAll = callback => {
-        $.get('/profile'), {spotter: this.spotter}
-        .then(
-          results => {
-            UserData.loadAll(results);
-            callback();
-          }
-        )
-    };
+//
+// UserData.fetchAll = callback => {
+//         $.get('/profile'), {spotter: this.spotter}
+//         .then(
+//           results => {
+//             UserData.loadAll(results);
+//             callback();
+//           }
+//         )
+//     };
 
 function spotterRequest(spotterObj) {
   this.spotter = spotterObj.spotter;
