@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Abel|Cabin|Nanum+Gothic" rel="stylesheet">
-        
+
         <script id="filter-results-template" type="text/x-handlebars-template">
             <p>{{name}}</p>
             <img src="{{image.[0]}}"></img>
@@ -21,7 +21,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="hotspots.html">Hotspots</a></li>
                     <li><a href="profile.html">Profile</a></li>
-                    <li><a href="login-signup.html">Login/Signup</a></li>
+                    <li><a href="" id="nuh-uh" onclick="notSoFast()">Login/Signup</a></li>
                 </ul>
             </nav>
         </header>
@@ -29,10 +29,11 @@
         <main>
             <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
             <br/>
-            <form>
-                <fieldset id="knownBird">
+            <div id="container">
+            <form id="knownBird">
+                <fieldset>
                     <legend>Add Known Bird</legend>
-                    <label>Species</label>
+                    <label>Species </label>
                     <select id="species-selector">
                             <option value="">Select Bird</option>
                             <option value="001">American Robin</option>
@@ -87,64 +88,63 @@
                             <option value="050">Brandt's Cormorant</option>
                     </select><br/>
 
-                    <label>Zip Code???<input type="text" name="zip"/></label> <br/>
-                    <label>Date<input type="date" name="date" /></label> <br/>
-                    <label>Upload Picture<input type="file" name="picture" /></label> <br/>
-                    <input type="submit" value="Upload" /> <br/>
+                    <label>Zip Code <input type="text" name="zip"/></label> <br/>
+                    <label>Date <input type="date" name="date" /></label> <br/>
                     <input type="submit" name ="add-submit" value="Add Known Bird" />
                 </fieldset>
             </form>
 
             <form id="filter">
-                <fieldset id="filterBird">
-                    <legend>Filter Potential Birds</legend>
-                    </label>Color:<label>
+                <fieldset>
+                    <legend id="filterBird">Filter Potential Birds</legend>
+                    <label class="identifiers">Color:
                         <br />
-                        <label>Black<input type="checkbox" name="color" value="black" /></label>
-                        <label>Gray<input type="checkbox" name="color" value="gray" /></label>
-                        <label>White<input type="checkbox" name="color" value="white" /></label>
-                        <label>Buff/Brown<input type="checkbox" name="color" value="buff/brown" /></label>
-                        <label>Red<input type="checkbox" name="color" value="red" /></label>
-                        <label>Yellow<input type="checkbox" name="color" value="yellow" /></label>
-                        <label>Olive/Green<input type="checkbox" name="color" value="olive/green" /></label>
-                        <label>Orange<input type="checkbox" name="color" value="orange" /></label>
-                    <label>Size:
+                        <label><input type="checkbox" name="color" value="black" />Black</label>
+                        <label><input type="checkbox" name="color" value="gray" />Gray</label>
+                        <label><input type="checkbox" name="color" value="white" />White</label>
+                        <label><input type="checkbox" name="color" value="buff/brown" />Buff/Brown</label>
+                        <label><input type="checkbox" name="color" value="red" />Red</label>
+                        <label><input type="checkbox" name="color" value="yellow" />Yellow</label>
+                        <label><input type="checkbox" name="color" value="olive/green" />Olive/Green</label>
+                        <label><input type="checkbox" name="color" value="orange" />Orange</label> <br/>
+                      </label>
+                    <label class="identifiers">
+                      Size:
                         <br />
-                            <label>Small (Sparrow - Robin)<input id="small" type="radio" name="size" value="small" /></label>
-                            <label>Medium (Crow - Duck)<input type="radio" name="size" value="medium" /></label>
-                            <label>Large (Hawk - Owl)<input type="radio" name="size" value="large" /></label>
-                            <label>Extra-Large (Heron - Eagle - Vulture)<input type="radio" name="size" value="extra-large" /></label>
-                    </label>
-                    <label>Habitat:
+                            <label><input type="radio" name="size" value="small" />Small (Sparrow - Robin)</label>
+                            <label><input type="radio" name="size" value="medium" />Medium (Crow - Duck)</label>
+                            <label><input type="radio" name="size" value="large" />Large (Hawk - Owl)</label>
+                            <label><input type="radio" name="size" value="extra-large" />Extra-Large (Heron - Vulture)</label>
+                    </label> <br/>
+                    <label class="identifiers">
+                      Habitat:
                         <br />
-                            <label>Forest<input type="radio" name="habitat" value="forest" /></label>
-                            <label>Desert<input type="radio" name="habitat" value="desert" /></label>
-                            <label>In/Near Water<input type="radio" name="habitat" value="water" /></label>
-                            <label>Urban<input type="radio" name="habitat" value="urban" /></label>                            
-                    </label>
-                    <label>Behavior:
+                            <label><input type="radio" name="habitat" value="forest" />Forest</label>
+                            <label><input type="radio" name="habitat" value="desert" />Desert</label>
+                            <label><input type="radio" name="habitat" value="water" />In/Near Water</label>
+                            <label><input type="radio" name="habitat" value="urban" />Urban</label>
+                    </label> <br/>
+                    <label>
+                      Behavior:
                         <br />
-                        <label>Soaring<input type="radio" name="behavior" value="soaring" /></label>
-                        <label>Ground Foraging<input type="radio" name="behavior" value="foraging" /></label>
-                        <label>In Tree/Bush<input type="radio" name="behavior" value="in-tree" /></label>
-                        <label>Swimming/Wading<input type="radio" name="behavior" value="swimming" /></label>
-                        <label>None of the Above<input type="radio" name="behavior" value="no-behavior" /></label>
-                    </label>
-                    <label>Location<input type="text" name="location" /></label>
-                    <label>Date<input type="date" name="date" /></label>
-                    <label>Upload Picture<input type="file" name="picture" /></label>
-                    <input type="submit" value="Upload" />
+                        <label><input type="radio" name="behavior" value="soaring" />Soaring</label>
+                        <label><input type="radio" name="behavior" value="foraging" />Ground Foraging</label>
+                        <label><input type="radio" name="behavior" value="in-tree" />In Tree/Bush</label>
+                        <label><input type="radio" name="behavior" value="swimming" />Swimming/Wading</label>
+                    </label><br/>
                     <input id="list-button" type="button" name ="filter-submit" value="Show Potential Birds" />
                 </fieldset>
             </form>
-
-            <!-- Checkboxes will need to be added dynamically, but they're here now for structure -->
-            <form>
-                <fieldset id="discoverBird">
+          </div>
+          <br/><br/>
+            <section>
+            <form id="discoverBird">
+                <fieldset>
                     <legend>Did You Spot One of These Birds?</legend>
                     <div id="filter-results"></div>
                 </fieldset>
             </form>
+          </section>
         </main>
 
         <footer>&copy To Spot a Mockingbird | 2018</footer>
@@ -164,7 +164,7 @@
         <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
         <script>
             BirdData.fetchAll();
-            
+
         </script>
     </body>
 </html>
