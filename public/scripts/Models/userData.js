@@ -5,23 +5,20 @@ function UserData (rawDataObj) {
     this.imageURL = rawDataObj.imageURL;
     this.date = rawDataObj.date;
     this.location = rawDataObj.location;
- };
+};
 
 UserData.all = [];
 
 UserData.prototype.toHtml = function() {
-    // const profileCountTemplate = Handlebars.compile($('#profile-count-template').text());
     const profileListTemplate = Handlebars.compile($('#profile-list-template').text());
-
     return profileListTemplate(this);
-    // profileCountTemplate(this), 
 };
 
 UserData.loadAll = function(rawData) {
     rawData.forEach(function(userObject) {
-      UserData.all.push(new UserData(userObject));
+    UserData.all.push(new UserData(userObject));
     })
-  };
+};
 
 UserData.fetchAll = function() {
 if(localStorage.rawData){
