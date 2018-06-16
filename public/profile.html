@@ -5,12 +5,6 @@
     <title>Profile Page</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 
-    <script id="profile-count-template" type="text/x-handlebars-template">
-        <p>You have spotted {{total all birds}} birds</p>
-        <p>{{{total one bird}}}</p>
-        <p>{{{total one bird}}}</p>
-    </script>
-
     <script id="profile-list-template" type="text/x-handlebars-template">
         <table>
             <tbody>
@@ -19,6 +13,7 @@
                     <td><img src="{{imageURL}}"></td>
                     <td><p>{{date}}</p></td>
                     <td><p>{{location}}</p></td>
+                    <td><input type='checkbox' value="{{id}}" id='bird-checkbox'></td>
                 </tr>
             </tbody>
         </table>
@@ -38,17 +33,30 @@
         </nav>
     </header>
     <main>
-        <section id="profile-count">
+      <form id="spotter" action="/profile" method="get">
+      <section id="profile-list">
+        <label>Enter user name to see their bird sightings<input id="spotter-input" type="text" name="spotter-input"/></label>
+        <input type="button" id="get-spotter" name="get-spotter" value="Get user sightings"/>
+      </form>
 
-        </section>
         <section id="profile-list">
-                <h2>Birds Spotted</h2>
+            <h2>Birds Spotted</h2>
+            <td><p>name</p></td>
+            <td><img src=imageURL></td>
+            <td><p>date</p></td>
+            <td><p>location</p></td>
+            <td><input type='checkbox' value= "1" id='bird-checkbox'></td>
+        </section>
 
+        <section id="bird-delete">
+            <button id="button" type="button">button</button>
+            <button type="button" class="delete-row">Delete Row</button>
         </section>
     </main>
     <footer>
         &copy To Spot a Mockingbird | 2018
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script type="text/javascript" src="./scripts/models/userLiSuData.js"></script>
@@ -63,7 +71,7 @@
     <script type="text/javascript" src="./scripts/controllers/profileController.js"></script>
     <script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
     <script>
-        UserData.fetchAll();
+        profileView.initIndexPage();
     </script>
 </body>
 </html>
