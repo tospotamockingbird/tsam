@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: url("https://photos-6.dropbox.com/t/2/AAAgU0obgaSSe-YclpZUsJAeUA4_8rXNX6FLhPMTRvd7fQ/12/868887072/jpeg/32x32/1/_/1/2/mockingbird-2498130.jpg/ELDu1bEJGAQgAigC/KhcRE6P031-Z06PFVO7uPYZAYTk1xGUP0ZmrFafjjG8?size=32x32&size_mode=5") no-repeat center center fixed;
+  background: url("../../public/images/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -110,11 +110,7 @@ img {
 }
 
 section {
-  align-content: center;
-}
-
-#discoverBird {
-
+  float: right;
 }
 
 input[type=text]:focus {

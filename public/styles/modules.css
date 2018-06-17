@@ -1,10 +1,5 @@
 @media screen and (max-width: 600px) {
 
-  html {
-    width: 100%;
-    display: flex;
-  }
-
   h1 {
     font-size: 35px;
   }
@@ -26,12 +21,10 @@
     font-size: 20px;
   }
 
-  input[type=submit], #list-button {
-    padding: 10px 15px;
-  }
-
   form {
     justify-content: center;
+    float: none;
+    width: auto;
   }
 
   #filterBird {
@@ -41,14 +34,7 @@
   }
 
   #filter {
-    max-width: 75%;
     overflow: auto;
     margin-right: 2px;
   }
-
-  #birdBox {
-    float: left;
-    text-align: center;
-  }
-
 }
