@@ -102,7 +102,7 @@ input[type=text]:focus {
   border: 2px solid rgba(63,191,131,1);
 }
 
-input[type=submit], .list-button {
+input[type=button] {
     font-family: 'Abel', sans-serif;
     background-color: rgba(180, 180, 180, 0.25);
     border: 3px solid floralwhite;
