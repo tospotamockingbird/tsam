@@ -23,6 +23,10 @@ main {
   min-width: 75%;
 }
 
+aside {
+  float: left;
+}
+
 h1 {
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 75px;
