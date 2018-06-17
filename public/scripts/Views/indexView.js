@@ -38,12 +38,12 @@ newSighting.submit = function(event) {
       date: $('#date').val()
     });
     sighting.insertSighting();
-    confirmBirdAdditon();
-};
-
-$(document).ready(function() {
-  $('#add-confirmation').hide();
-  $('#discoverBird').hide();
-})
-
+  };
+  
+  $(document).ready(function() {
+    $('#add-confirmation').hide();
+    $('#discoverBird').hide();
+  })
+  
+confirmBirdAdditon();
 knownBirdSubmit();
