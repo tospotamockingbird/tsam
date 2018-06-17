@@ -1,12 +1,33 @@
 'use strict';
+function profileEvents() {
+  $('#get-spotter').on('click', newSpotter.submit);
+  $('#delete-db').on('click', newDeleter.submit);
+};
+
+
 const profileView = {};
 
-profileView.initIndexPage = function() {
-    $('#get-spotter').on('click', newSpotter.submit);
+profileView.appendData = function() {
+    UserData.all.forEach( userSighting => {
+    $('#profile-list').append(userSighting.toHtml(userSighting));
+  });
+}
 
-    UserData.all.forEach(function(project) {
-        $('#profile-list').append(project.toHtml());
-      });
+const newSpotter = {};
+newSpotter.submit = function(event) {
+  let spotter = new spotterRequest({
+    spotter: $('#spotter-input').val().toUpperCase()
+    });
+    spotter.requestSpotter();
+};
+
+const newDeleter = {};
+
+newDeleter.submit = function(event) {
+  let deleter = $('input[type=checkbox]:checked').map(function(index, el) {
+      return $(el).val();
+      }).get()
+    requestDeleter(deleter);
 }
 
 function notSoFast() {
@@ -39,24 +60,3 @@ $(document).ready(function(){
 		alert(tmp);
   });
 });
-
-// conflict is ok just combine
-
-const newSpotter = {};
-
-newSpotter.submit = function(event) {
-  let spotter = new spotterRequest({
-    spotter: $('#spotter-input').val().toUpperCase()
-    });
-  spotter.requestSpotter();
-};
-
-// const newDeleter = {};
-//
-// deleters.submit = function(event) {
-//   let deleters = new deleterRequest({
-//     spotter: $("input[type='checkbox']").val(); this will be all values of checked boxes
-// $($0).is(":checked")
-//     });
-//   spotter.requestSpotter();
-// };
