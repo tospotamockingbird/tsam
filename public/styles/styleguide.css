@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: url("/public/images/background.jpg") no-repeat center center fixed;
+  background: url("../../public/images/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -19,8 +19,11 @@ main {
 
 #container {
   display: flex;
-  justify-content: space-between;
-  min-width: 75%;
+  justify-content: space-evenly;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 100%;
+  height: 100%;
 }
 
 aside {
@@ -83,6 +86,7 @@ fieldset {
 }
 
 p {
+  text-align: center;
   padding-left: 15%;
   padding-right: 15%;
   font-family: 'Cabin', sans-serif;
@@ -91,11 +95,12 @@ p {
 }
 
 img {
-  max-width: 300px;
+  max-width: 250px;
 }
 
 #knownBird {
   min-width: 150px;
+  /* height: 100%; */
 }
 
 #filter {
@@ -117,10 +122,6 @@ input[type=button] {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
-
-.required {
-  background-color: rgba(142,114,97,1);
 }
 
 #map {

@@ -26,14 +26,15 @@
         </header>
 
         <main>
-            <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
+            <p>Have you spotted a bird?  Add it to your profile page!  Use the form on the left to add a bird that you know the species of.  <br/>
+              Not sure which bird species you've spotted?  Use the form on the right to filter potential birds.</p>
             <br/>
             <section id="container">
             <form id="sighting" action="/sighting" method="post">
               <fieldset id="knownBird">
                     <legend>Add Known Bird</legend>
                     <label>Who spotted the bird?<input id="spotter" type="text" name="spotter" /></label> <br/>
-                    <label>Species </label>
+                    <label>Species </label><br/>
                     <select id="species-selector">
                             <option value="">Select Bird</option>
                             <option value="001">American Robin</option>
@@ -88,16 +89,17 @@
                             <option value="050">Brandt's Cormorant</option>
                     </select><br/>
 
-                    <label>Zip Code <input id="zip" type="text" name="zip"/></label> <br/>
-                    <label>Date <input id="date" type="date" name="date" /></label> <br/>
-                    <input type="button" id="add-sighting" name="add-submit" value="Add Known Bird" />
+                    <label>Zip Code <br/> <input id="zip" type="text" name="zip"/></label> <br/>
+                    <label>Date <br/> <input id="date" type="date" name="date" /></label> <br/>
+                    <input type="button" id="add-sighting" name ="add-submit" value="Add Known Bird" />
+                    <p id="add-confirmation">Bird Added!</p>
                 </fieldset>
             </form>
 
             <form id="filter">
                 <fieldset>
                     <legend id="filterBird">Filter Potential Birds</legend>
-                    <label class="identifiers">Color:
+                    <label>Color:
                         <br />
                         <label><input type="checkbox" name="color" value="black" />Black</label>
                         <label><input type="checkbox" name="color" value="gray" />Gray</label>
@@ -108,7 +110,7 @@
                         <label><input type="checkbox" name="color" value="olive/green" />Olive/Green</label>
                         <label><input type="checkbox" name="color" value="orange" />Orange</label> <br/>
                       </label>
-                    <label class="identifiers">
+                    <label>
                       Size:
                         <br />
                             <label><input type="radio" name="size" value="small" />Small (Sparrow - Robin)</label>
@@ -116,7 +118,7 @@
                             <label><input type="radio" name="size" value="large" />Large (Hawk - Owl)</label>
                             <label><input type="radio" name="size" value="extra-large" />Extra-Large (Heron - Vulture)</label>
                     </label> <br/>
-                    <label class="identifiers">
+                    <label>
                       Habitat:
                         <br />
                             <label><input type="radio" name="habitat" value="forest" />Forest</label>

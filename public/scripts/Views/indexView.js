@@ -16,6 +16,18 @@ indexView.initIndexPage = function() {
 
 const newSighting = {};
 
+function confirmBirdAdditon() {
+  $('#add-sighting').on('click', function() {
+     $('#add-confirmation').show();
+  })
+}
+
+function knownBirdSubmit() {
+  $('#list-button').on('click', function() {
+    $('#discoverBird').show();
+  })
+}
+
 newSighting.submit = function(event) {
     event.preventDefault();
     let sighting = new userSighting({
@@ -26,4 +38,12 @@ newSighting.submit = function(event) {
       date: $('#date').val()
     });
     sighting.insertSighting();
+    confirmBirdAdditon();
 };
+
+$(document).ready(function() {
+  $('#add-confirmation').hide();
+  $('#discoverBird').hide();
+})
+
+knownBirdSubmit();
