@@ -24,10 +24,9 @@ app.get('/', function(request, response){
 
 // beginning of get request for all sightings made by one spotter. spotter input field is on profile page
 app.get('/profile', function( request, response ) {
-  console.log('getting profile', request);
   client.query(`
     SELECT * FROM sightings
-    where spotter=$1;
+    where spotter='$1';
     `,
       [request.query.spotter]
   )

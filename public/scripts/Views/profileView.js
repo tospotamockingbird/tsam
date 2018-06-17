@@ -3,11 +3,19 @@ const profileView = {};
 
 profileView.initIndexPage = function() {
     $('#get-spotter').on('click', newSpotter.submit);
-
-    UserData.all.forEach(function(project) {
-        $('#profile-list').append(project.toHtml());
-      });
+    UserData.all.forEach(function(userSighting) {
+    console.log(userSighting);
+    // $('#profile-list').append();
+  });
 }
+
+const newSpotter = {};
+newSpotter.submit = function(event) {
+  let spotter = new spotterRequest({
+    spotter: $('#spotter-input').val().toUpperCase()
+    });
+  spotter.requestSpotter();
+};
 
 function notSoFast() {
   alert("Not so fast, you saucy minx. Personalized accounts to come in beta 2.0!");
@@ -39,17 +47,6 @@ $(document).ready(function(){
 		alert(tmp);
   });
 });
-
-// conflict is ok just combine
-
-const newSpotter = {};
-
-newSpotter.submit = function(event) {
-  let spotter = new spotterRequest({
-    spotter: $('#spotter-input').val().toUpperCase()
-    });
-  spotter.requestSpotter();
-};
 
 // const newDeleter = {};
 //

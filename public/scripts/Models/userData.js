@@ -1,10 +1,11 @@
 'use strict';
 
 function UserData (rawDataObj) {
-    this.name = rawDataObj.name;
-    this.imageURL = rawDataObj.imageURL;
-    this.date = rawDataObj.date;
-    this.location = rawDataObj.location;
+  this.spotter = rawDataObj.spotter;
+  this.birdID = rawDataObj.birdID;
+  this.species = rawDataObj.species;
+  this.zip = rawDataObj.zip;
+  this.date = rawDataObj.date;
 };
 
 UserData.all = [];
@@ -25,9 +26,11 @@ function spotterRequest(spotterObj) {
 }
 
 spotterRequest.prototype.requestSpotter = function() {
-    console.log('requesting spotters sightings', this.spotter)
     $.get('/profile', {spotter: this.spotter})
-    .done(data => console.log(data))
+    .done(data => {
+      UserData.loadAll(data);
+      profileView.initIndexPage();
+    })
     .fail(err => console.log(err));
 };
 
