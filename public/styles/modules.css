@@ -22,9 +22,16 @@
   }
 
   form {
-    justify-content: center;
-    float: none;
-    width: auto;
+    min-width: 90%;
+    display: block;
+  }
+
+  #container {
+    display: block;
+  }
+
+  #discoverBird {
+    display: block;
   }
 
   #filterBird {
