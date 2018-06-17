@@ -21,6 +21,7 @@ main {
   display: flex;
   justify-content: space-between;
   min-width: 75%;
+  height: 475px;
 }
 
 h1 {
@@ -169,6 +170,11 @@ table {
 
 td img {
   width: 5em;
+}
+
+#discoverBird {
+  margin: 5px;
+  padding: 5px;
 }
 
 /* rgba(115,97,83) --> grey/brown */
