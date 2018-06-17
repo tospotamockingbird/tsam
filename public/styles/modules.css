@@ -46,7 +46,11 @@
 
 @media screen and (min-width: 600px) {
   h1 {
-    font-size: 65px;
+    font-size: 55px;
+  }
+
+  p {
+    font-size: 32px;
   }
 
   li a {
