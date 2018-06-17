@@ -22,6 +22,12 @@ function confirmBirdAdditon() {
   })
 }
 
+function knownBirdSubmit() {
+  $('#list-button').on('click', function() {
+    $('#discoverBird').show();
+  })
+}
+
 newSighting.submit = function(event) {
     event.preventDefault();
     let sighting = new userSighting({
@@ -37,4 +43,7 @@ newSighting.submit = function(event) {
 
 $(document).ready(function() {
   $('#add-confirmation').hide();
+  $('#discoverBird').hide();
 })
+
+knownBirdSubmit();
