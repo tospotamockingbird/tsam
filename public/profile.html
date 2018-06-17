@@ -9,10 +9,9 @@
         <table>
             <tbody>
                 <tr>
-                    <td><p>{{name}}</p></td>
-                    <td><img src="{{imageURL}}"></td>
+                    <td><p>{{species}}</p></td>
                     <td><p>{{date}}</p></td>
-                    <td><p>{{location}}</p></td>
+                    <td><p>{{zip}}</p></td>
                     <td><input type='checkbox' value="{{id}}" id='bird-checkbox'></td>
                 </tr>
             </tbody>
@@ -41,16 +40,10 @@
 
         <section id="profile-list">
             <h2>Birds Spotted</h2>
-            <td><p>name</p></td>
-            <td><img src=imageURL></td>
-            <td><p>date</p></td>
-            <td><p>location</p></td>
-            <td><input type='checkbox' value= "1" id='bird-checkbox'></td>
         </section>
 
         <section id="bird-delete">
-            <button id="button" type="button">button</button>
-            <button type="button" class="delete-row">Delete Row</button>
+            <button type="button" id="delete-db" class="delete-row">Delete Row</button>
         </section>
     </main>
     <footer>
@@ -65,7 +58,7 @@
     <script type="text/javascript" src="./scripts/views/hotspotsView.js"></script>
     <script type="text/javascript" src="./scripts/views/profileView.js"></script>
     <script>
-        profileView.initIndexPage();
+        profileEvents();
     </script>
 </body>
 </html>
