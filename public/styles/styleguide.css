@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -95,7 +96,7 @@ p {
 }
 
 img {
-  max-width: 250px;
+  max-width: 300px;
 }
 
 #knownBird {

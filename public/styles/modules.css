@@ -35,8 +35,6 @@
   }
 
   #filterBird {
-    position: -webkit-sticky;
-    position: sticky;
     overflow-x: none;
   }
 
