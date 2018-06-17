@@ -58,6 +58,13 @@ li {
   display: inline;
 }
 
+#butt {
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  font-size: 15px;
+  color: rgba(225,233,231,1);
+}
+
 a, legend, label {
   font-family: 'Abel', sans-serif;
   font-size: 35px;
@@ -94,6 +101,7 @@ p {
   font-size: 45px;
   color: rgba(225,233,231,1);
 }
+
 
 img {
   max-width: 300px;
