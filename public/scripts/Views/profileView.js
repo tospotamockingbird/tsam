@@ -3,9 +3,10 @@ const profileView = {};
 
 profileView.initIndexPage = function() {
     $('#get-spotter').on('click', newSpotter.submit);
-    UserData.all.forEach(function(userSighting) {
+
+    UserData.all.forEach( userSighting => {
     console.log(userSighting);
-    // $('#profile-list').append();
+    $('#profile-list').append(userSighting.toHtml(userSighting));
   });
 }
 
@@ -14,7 +15,7 @@ newSpotter.submit = function(event) {
   let spotter = new spotterRequest({
     spotter: $('#spotter-input').val().toUpperCase()
     });
-  spotter.requestSpotter();
+    spotter.requestSpotter();
 };
 
 function notSoFast() {

@@ -1,8 +1,9 @@
 'use strict';
 
 function UserData (rawDataObj) {
+  this.id = rawDataObj.id;
   this.spotter = rawDataObj.spotter;
-  this.birdID = rawDataObj.birdID;
+  this.birdID = rawDataObj.birdid;
   this.species = rawDataObj.species;
   this.zip = rawDataObj.zip;
   this.date = rawDataObj.date;
@@ -10,9 +11,10 @@ function UserData (rawDataObj) {
 
 UserData.all = [];
 
-UserData.prototype.toHtml = function() {
-    const profileListTemplate = Handlebars.compile($('#profile-list-template').text());
-    return profileListTemplate(this);
+UserData.prototype.toHtml = function(data) {
+    var template = Handlebars.compile($('#profile-list-template').text());
+    var profileListTemplate = template(data);
+    return profileListTemplate;
 };
 
 UserData.loadAll = function(rawData) {
@@ -28,6 +30,7 @@ function spotterRequest(spotterObj) {
 spotterRequest.prototype.requestSpotter = function() {
     $.get('/profile', {spotter: this.spotter})
     .done(data => {
+      // console.log(data);
       UserData.loadAll(data);
       profileView.initIndexPage();
     })

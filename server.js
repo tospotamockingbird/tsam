@@ -26,7 +26,7 @@ app.get('/', function(request, response){
 app.get('/profile', function( request, response ) {
   client.query(`
     SELECT * FROM sightings
-    where spotter='$1';
+    where spotter=$1;
     `,
       [request.query.spotter]
   )
