@@ -46,19 +46,19 @@
 
 @media screen and (min-width: 600px) {
   h1 {
-    font-size: 75px;
+    font-size: 65px;
   }
 
   li a {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   legend {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   label {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   input[type="button"] {

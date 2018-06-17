@@ -36,6 +36,10 @@ h1 {
   padding-right: 15px;
 }
 
+h2 {
+  text-align: center;
+}
+
 h2, h3 {
   font-family: 'Nanum Gothic', sans-serif;
   color: rgba(225,233,231,1);
@@ -126,13 +130,6 @@ input[type=button] {
   border: 5px dotted rgba(75,175,145,1);
 }
 
-footer {
-  position: absolute;
-  font-family: 'Nanum Gothic', sans-serif;
-  text-align: center;
-  color: rgba(225,233,231,1);
-  width: 100%;
-}
 
 /* Following code manipulates the appearance of the profile list table. It's meant to be a table that lists each bird spotted*/
 
@@ -166,9 +163,21 @@ td img {
   align-content: center;
 }
 
-/* aside {
-  float: left;
-} */
+#profile-list {
+  text-align: center;
+  display: block;
+  padding-top: 25px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+footer {
+  position: absolute;
+  font-family: 'Nanum Gothic', sans-serif;
+  text-align: center;
+  color: rgba(225,233,231,1);
+  width: 100%;
+}
 
 /* rgba(115,97,83) --> grey/brown */
 /* rgba(142,114,97,0.5) --> lighter grey/brown */
