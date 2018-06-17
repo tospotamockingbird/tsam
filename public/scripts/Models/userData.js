@@ -30,9 +30,8 @@ function spotterRequest(spotterObj) {
 spotterRequest.prototype.requestSpotter = function() {
     $.get('/profile', {spotter: this.spotter})
     .done(data => {
-      // console.log(data);
       UserData.loadAll(data);
-      profileView.initIndexPage();
+      profileView.appendData();
     })
     .fail(err => console.log(err));
 };
@@ -51,12 +50,11 @@ userSighting.prototype.insertSighting = function() {
     .fail(err => console.log(err));
 };
 
-// function deleterRequest(deleterObj) {
-//   // this will be the creation of this.checkbox values
-// }
-//
-// userSighting.prototype.insertSighting = function() {
-//     $.get('/delete', {delete request : stuff from above})
-//     .done(data => console.log(data))
-//     .fail(err => console.log(err));
-// };
+const requestDeleter = function(sightingIds) {
+  $.ajax({
+    url: '/sightings?ids='+sightingIds.join(','),
+    type: 'DELETE',
+    success: data => console.log(data),
+  })
+  .fail(err => console.log(err));
+};

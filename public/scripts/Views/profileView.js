@@ -1,11 +1,14 @@
 'use strict';
+function profileEvents() {
+  $('#get-spotter').on('click', newSpotter.submit);
+  $('#delete-db').on('click', newDeleter.submit);
+};
+
+
 const profileView = {};
 
-profileView.initIndexPage = function() {
-    $('#get-spotter').on('click', newSpotter.submit);
-
+profileView.appendData = function() {
     UserData.all.forEach( userSighting => {
-    console.log(userSighting);
     $('#profile-list').append(userSighting.toHtml(userSighting));
   });
 }
@@ -17,6 +20,15 @@ newSpotter.submit = function(event) {
     });
     spotter.requestSpotter();
 };
+
+const newDeleter = {};
+
+newDeleter.submit = function(event) {
+  let deleter = $('input[type=checkbox]:checked').map(function(index, el) {
+      return $(el).val();
+      }).get()
+    requestDeleter(deleter);
+}
 
 function notSoFast() {
   alert("Not so fast, you saucy minx. Personalized accounts to come in beta 2.0!");
@@ -48,13 +60,3 @@ $(document).ready(function(){
 		alert(tmp);
   });
 });
-
-// const newDeleter = {};
-//
-// deleters.submit = function(event) {
-//   let deleters = new deleterRequest({
-//     spotter: $("input[type='checkbox']").val(); this will be all values of checked boxes
-// $($0).is(":checked")
-//     });
-//   spotter.requestSpotter();
-// };

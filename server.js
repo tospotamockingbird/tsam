@@ -51,16 +51,16 @@ app.post('/sighting', function(request, response){
     .catch(err => console.log(err));
   })
 
-//need to get delete from picklist checkboxes on profile page
-// app.delete('/delete', (request, response) => {
-//     client.query(
-//       `DELETE FROM sightings
-//       WHERE id= ANY('$1'::int[]);`,
-//       [request.query.deleters]
-//     )
-//     .then(() => response.send('Delete complete'))
-//     .catch(console.error);
-//   });
+app.delete('/sightings', (request, response) => {
+    console.log(request.query);
+    console.log(`DELETE FROM sightings WHERE id in (${request.query.ids});`)
+    client.query(
+      `DELETE FROM sightings
+      WHERE id in (${request.query.ids});`
+    )
+    .then(() => response.send('Delete complete'))
+    .catch(console.error);
+  });
 
 app.listen(PORT, function() {
     console.log(`Listening on port: ${PORT}`);

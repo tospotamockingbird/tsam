@@ -40,16 +40,10 @@
 
         <section id="profile-list">
             <h2>Birds Spotted</h2>
-            <!-- <td><p>name</p></td>
-            <td><img src=imageURL></td>
-            <td><p>date</p></td>
-            <td><p>location</p></td>
-            <td><input type='checkbox' value= "1" id='bird-checkbox'></td> -->
         </section>
 
         <section id="bird-delete">
-            <button id="button" type="button">button</button>
-            <button type="button" class="delete-row">Delete Row</button>
+            <button type="button" id="delete-db" class="delete-row">Delete Row</button>
         </section>
     </main>
     <footer>
@@ -58,19 +52,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-    <!-- <script type="text/javascript" src="./scripts/models/userLiSuData.js"></script> -->
     <script type="text/javascript" src="./scripts/models/hotspotsData.js"></script>
     <script type="text/javascript" src="./scripts/models/userData.js"></script>
     <script type="text/javascript" src="./scripts/views/indexView.js"></script>
-    <!-- <script type="text/javascript" src="./scripts/views/hotspotsView.js"></script> -->
+    <script type="text/javascript" src="./scripts/views/hotspotsView.js"></script>
     <script type="text/javascript" src="./scripts/views/profileView.js"></script>
-    <!-- <script type="text/javascript" src="./scripts/views/loginView.js"></script> -->
-    <!-- <script type="text/javascript" src="./scripts/controllers/indexController.js"></script> -->
-    <!-- <script type="text/javascript" src="./scripts/controllers/hotspotsController.js"></script> -->
-    <!-- <script type="text/javascript" src="./scripts/controllers/profileController.js"></script> -->
-    <!-- <script type="text/javascript" src="./scripts/controllers/loginController.js"></script> -->
     <script>
-        profileView.initIndexPage();
+        profileEvents();
     </script>
 </body>
 </html>
