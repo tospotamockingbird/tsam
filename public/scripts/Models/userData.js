@@ -2,7 +2,7 @@
 
 function UserData (rawDataObj) {
     this.name = rawDataObj.name;
-    this.imageURL = rawDataObj.imageURL;
+    this.image = rawDataObj.image;
     this.date = rawDataObj.date;
     this.location = rawDataObj.location;
 };
@@ -41,7 +41,7 @@ function userSighting(sightingObj) {
 
 userSighting.prototype.insertSighting = function() {
     $.post('/sighting', {spotter: this.spotter, birdID: this.birdID, species: this.species, zip: this.zip, date: this.date})
-    .done(data => console.log(data))
+    .done(data => UserData.loadAll(data))
     .fail(err => console.log(err));
 };
 
