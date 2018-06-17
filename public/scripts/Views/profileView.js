@@ -1,12 +1,43 @@
 'use strict';
+function profileEvents() {
+  $('#get-spotter').on('click', newSpotter.submit);
+  $('#delete-db').on('click', newDeleter.submit);
+};
+
+
 const profileView = {};
 
+<<<<<<< HEAD
 profileView.initIndexPage = function() {
     $('#get-spotter').on('click', newSpotter.submit);
 
     UserData.all.forEach(function(project) {
         $('#profile-list').append(project.toHtml());
       });
+}
+=======
+profileView.appendData = function() {
+    UserData.all.forEach( userSighting => {
+    $('#profile-list').append(userSighting.toHtml(userSighting));
+  });
+}
+
+const newSpotter = {};
+newSpotter.submit = function(event) {
+  let spotter = new spotterRequest({
+    spotter: $('#spotter-input').val().toUpperCase()
+    });
+    spotter.requestSpotter();
+};
+>>>>>>> 9f404ce4512b0cb53b5d8425e18c803c206ec8cc
+
+const newDeleter = {};
+
+newDeleter.submit = function(event) {
+  let deleter = $('input[type=checkbox]:checked').map(function(index, el) {
+      return $(el).val();
+      }).get()
+    requestDeleter(deleter);
 }
 
 function notSoFast() {
@@ -39,6 +70,7 @@ $(document).ready(function(){
 		alert(tmp);
   });
 });
+<<<<<<< HEAD
 
 // conflict is ok just combine
 
@@ -60,3 +92,5 @@ newSpotter.submit = function(event) {
 //     });
 //   spotter.requestSpotter();
 // };
+=======
+>>>>>>> 9f404ce4512b0cb53b5d8425e18c803c206ec8cc

@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 // const conString = 'postgres://USERNAME:PASSWORD@HOST:PORT';
-const conString = 'postgres://taylor@localhost:5432/tsam'; // TODO: Don't forget to set your own conString
+const conString = 'postgres://ValerieSiira@localhost:5432/tsam'; // TODO: Don't forget to set your own conString
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
@@ -52,16 +52,16 @@ app.post('/sighting', function(request, response){
     .catch(err => console.log(err));
   })
 
-//need to get delete from picklist checkboxes on profile page
-// app.delete('/delete', (request, response) => {
-//     client.query(
-//       `DELETE FROM sightings
-//       WHERE id= ANY('$1'::int[]);`,
-//       [request.query.deleters]
-//     )
-//     .then(() => response.send('Delete complete'))
-//     .catch(console.error);
-//   });
+app.delete('/sightings', (request, response) => {
+    console.log(request.query);
+    console.log(`DELETE FROM sightings WHERE id in (${request.query.ids});`)
+    client.query(
+      `DELETE FROM sightings
+      WHERE id in (${request.query.ids});`
+    )
+    .then(() => response.send('Delete complete'))
+    .catch(console.error);
+  });
 
 app.listen(PORT, function() {
     console.log(`Listening on port: ${PORT}`);
